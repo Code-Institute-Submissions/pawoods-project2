@@ -27,22 +27,43 @@
         <!-- start screen -->
         <div class="start screen">
             <h2>Welcome to <span>SNAP!</span></h2>
-            <p><span>SNAP!</span> is a game of finding pairs against the clock designed to test and improve your memory and speed.</p>
+            <p><span>SNAP!</span> is a game of finding matching pairs against the clock designed to test and improve your memory and speed.</p>
             <button>Rules</button>
             <p>Choose a difficulty level below to begin.</p>
             <div class="difficulty-buttons">
-                <button>Easy</button>
-                <button>Medium</button>
-                <button>Hard</button>
+                <button id="easy" class="easy button">Easy</button>
+                <button id="medium " class="medium button">Medium</button>
+                <button id="hard" class="hard button">Hard</button>
             </div>
             <p>Good Luck!</p>
         </div>
+        
         <!-- game screen -->
+        <div class="game screen hidden">
+            <div class="game-header">
+                <div class="score-container">
+                    <span class="label">Time: </span>
+                    <span class="timer"></span>
+                </div>
+                <div class="score-container">
+                    <span class="label">Score: </span>
+                    <span class="score"></span>
+                </div>
+            </div>
+            <div class="cards-board">
+                <!-- cards rendered here based on difficulty chosen -->
+            </div>
+        </div>
 
         <!-- end screen -->
+        <div class="end screen hidden">
 
+        </div>
+        
         <!-- contact screen -->
+        <div class="contact screen hidden">
 
+        </div>
     </main>
     <footer class="footer">
         <div class="social">
