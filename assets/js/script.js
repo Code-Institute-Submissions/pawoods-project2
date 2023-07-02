@@ -87,6 +87,7 @@ function createGame(chosenDifficulty) {
         gameCards[j] = k;
     }
     showGameScreen();
+    renderCards();
 }
 // Render cards within game screen and adds event listeners for highlighting
 function renderCards() {
@@ -95,7 +96,7 @@ function renderCards() {
         card.classList.add("card-container");
         card.id = gameCards[i].id;
         card.innerHTML = `<div class="card back">?</div>
-                        <div class="card front">${gameCards[i].value}</div>`;
+                        <div class="card front hidden">${gameCards[i].value}</div>`;
         cardsBoard.appendChild(card);
     }
 }
