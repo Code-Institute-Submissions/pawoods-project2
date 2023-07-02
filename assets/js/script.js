@@ -21,3 +21,11 @@ function showHomeScreen() {
     contactScreen.classList.add("hidden");
     console.log("HOME!");
 }
+
+function showGameScreen() {
+    startScreen.classList.add("hidden");
+    gameScreen.classList.remove("hidden");
+    endScreen.classList.add("hidden");
+    contactScreen.classList.add("hidden");
+    console.log("GAME!");
+}
