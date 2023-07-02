@@ -64,6 +64,7 @@ function showContactScreen() {
 }
 // Create game from chosen difficulty
 function createGame(chosenDifficulty) {
+    clearGame();
     let gamePairs = difficultyPairs[chosenDifficulty];
     // For loop creates two cards with same value but unique id's
     for (let i = 1; i <= gamePairs; i++) {
@@ -77,4 +78,8 @@ function createGame(chosenDifficulty) {
 
         gameCards.push(pair1, pair2);
     }
+}
+// Clear game data 
+function clearGame() {
+    gameCards = [];
 }
