@@ -29,3 +29,11 @@ function showGameScreen() {
     contactScreen.classList.add("hidden");
     console.log("GAME!");
 }
+
+function showEndScreen() {
+    startScreen.classList.add("hidden");
+    gameScreen.classList.add("hidden");
+    endScreen.classList.remove("hidden");
+    contactScreen.classList.add("hidden");
+    console.log("END!");
+}
