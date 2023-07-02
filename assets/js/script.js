@@ -9,11 +9,12 @@ const difficultyPairs = {
     "extreme": 14
 }
 
-// Screens
+// Screens and containers
 const startScreen = document.querySelector(".start");
 const gameScreen = document.querySelector(".game");
 const endScreen = document.querySelector(".end");
 const contactScreen = document.querySelector(".contact");
+const cardsBoard = document.querySelector(".cards-board");
 
 // Buttons
 const themeButton = document.querySelector(".theme");
@@ -86,4 +87,15 @@ function createGame(chosenDifficulty) {
         gameCards[j] = k;
     }
     showGameScreen();
+}
+// Render cards within game screen and adds event listeners for highlighting
+function renderCards() {
+    for (let i = 0; i < gameCards.length; i++) {
+        let card = document.createElement("div");
+        card.classList.add("card-container");
+        card.id = gameCards[i].id;
+        card.innerHTML = `<div class="card back">?</div>
+                        <div class="card front">${gameCards[i].value}</div>`;
+        cardsBoard.appendChild(card);
+    }
 }
