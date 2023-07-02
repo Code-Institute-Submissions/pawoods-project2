@@ -1,3 +1,14 @@
+//Variable for game data
+let gameCards = [];
+
+// Pairs of cards for each difficulty
+const difficultyPairs = {
+    "easy": 8,
+    "medium": 10,
+    "hard": 12,
+    "extreme": 14
+}
+
 // Screens
 const startScreen = document.querySelector(".start");
 const gameScreen = document.querySelector(".game");
@@ -52,6 +63,18 @@ function showContactScreen() {
     console.log("CONTACT!");
 }
 // Create game from chosen difficulty
-function createGame(difficulty) {
-    console.log(difficulty);
+function createGame(chosenDifficulty) {
+    let gamePairs = difficultyPairs[chosenDifficulty];
+    // For loop creates two cards with same value but unique id's
+    for (let i = 1; i <= gamePairs; i++) {
+        let pair1 = {};
+        pair1.id = i;
+        pair1.id = i;
+
+        let pair2 = {};
+        pair2.id = i + gamePairs;
+        pair2.value = i;
+
+        gameCards.push(pair1, pair2);
+    }
 }

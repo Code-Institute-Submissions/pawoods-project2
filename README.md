@@ -59,7 +59,9 @@
 1. Bug found where calling any show**Screen function would hide the contact button in the header.
 - Fixed by changing the class name from "contact" to "contact-button" as the contact screen had the class "contact".
 ---
-
+2. Bug found where calling createGame would give an error when selecting "medium" difficulty but not on any other.
+- Fixed by removing an accidental space found in "medium" button id.
+---
 
 #### Unfixed Bugs
 
