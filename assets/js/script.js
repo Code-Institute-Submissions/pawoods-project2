@@ -62,6 +62,7 @@ function showContactScreen() {
 // Clear game data 
 function clearGame() {
     gameCards = [];
+    cardsBoard.innerHTML = "";
 }
 // Create and shuffle game cards from chosen difficulty 
 function createGame(chosenDifficulty) {

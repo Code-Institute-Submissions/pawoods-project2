@@ -65,6 +65,9 @@
 3. Bug found where half the cards created within createGame function were given an id but weren't given a value.
 - Fixed by identifying that the id had been set twice on the first card of each pair instead of an id and a value. pair1.id changed to pair1.value.
 ---
+4. Bug found when renderCards function was called, it would add a new set of cards to the inner HTML of the cards board.
+- Fixed by adding a clearing line of code within clearGame function to set innerHTML to "".
+---
 
 
 #### Unfixed Bugs
