@@ -36,7 +36,6 @@ function showHomeScreen() {
     gameScreen.classList.add("hidden");
     endScreen.classList.add("hidden");
     contactScreen.classList.add("hidden");
-    console.log("HOME!");
 }
 // Show only game screen
 function showGameScreen() {
@@ -44,7 +43,6 @@ function showGameScreen() {
     gameScreen.classList.remove("hidden");
     endScreen.classList.add("hidden");
     contactScreen.classList.add("hidden");
-    console.log("GAME!");
 }
 // Show only end screen
 function showEndScreen() {
@@ -52,7 +50,6 @@ function showEndScreen() {
     gameScreen.classList.add("hidden");
     endScreen.classList.remove("hidden");
     contactScreen.classList.add("hidden");
-    console.log("END!");
 }
 // Show only contact screen
 function showContactScreen() {
@@ -60,7 +57,10 @@ function showContactScreen() {
     gameScreen.classList.add("hidden");
     endScreen.classList.add("hidden");
     contactScreen.classList.remove("hidden");
-    console.log("CONTACT!");
+}
+// Clear game data 
+function clearGame() {
+    gameCards = [];
 }
 // Create game from chosen difficulty
 function createGame(chosenDifficulty) {
@@ -78,8 +78,4 @@ function createGame(chosenDifficulty) {
 
         gameCards.push(pair1, pair2);
     }
-}
-// Clear game data 
-function clearGame() {
-    gameCards = [];
 }
