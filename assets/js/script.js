@@ -62,7 +62,7 @@ function showContactScreen() {
 function clearGame() {
     gameCards = [];
 }
-// Create game from chosen difficulty
+// Create and shuffle game cards from chosen difficulty 
 function createGame(chosenDifficulty) {
     clearGame();
     let gamePairs = difficultyPairs[chosenDifficulty];
@@ -78,4 +78,12 @@ function createGame(chosenDifficulty) {
 
         gameCards.push(pair1, pair2);
     }
+    // Fisher Yates shuffle method, learned through https://www.w3schools.com/js/js_array_sort.asp
+    for (let i = gameCards.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i+1));
+        let k = gameCards[i];
+        gameCards[i] = gameCards[j];
+        gameCards[j] = k;
+    }
+    showGameScreen();
 }
