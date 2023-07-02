@@ -99,5 +99,25 @@ function renderCards() {
         card.innerHTML = `<div class="card back">?</div>
                         <div class="card front hidden">${gameCards[i].value}</div>`;
         cardsBoard.appendChild(card);
+        addCardEvents(card);
     }
+}
+
+function addCardEvents(card) {
+    card.addEventListener("click", showCard);
+}
+
+function removeCardEvents(card) {
+    card.removeEventListener("click", showCard);
+}
+
+function showCard(e) {
+    let card = e.target.parentNode;
+    let cardBack = e.target.parentNode.querySelector(".back");
+    let cardFront = e.target.parentNode.querySelector(".front");
+
+    cardBack.classList.toggle("hidden");
+    cardFront.classList.toggle("hidden");
+
+    removeCardEvents(card);
 }
