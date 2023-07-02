@@ -15,6 +15,8 @@
 - [Development](#development)
     - [Languages](#languages)
 - [Testing](#testing)
+    - [Manual Testing](#manual-testing)
+    - 
 - [Deployment](#deployment)
     - [Live Deployment](#live-deployment)
     - [Local Deployment](#local-deployment)
@@ -46,6 +48,8 @@
 ### Languages
 
 ## Testing
+
+### Manual Testing
 
 ## Deployment
 
