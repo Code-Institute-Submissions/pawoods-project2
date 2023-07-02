@@ -70,7 +70,7 @@ function createGame(chosenDifficulty) {
     for (let i = 1; i <= gamePairs; i++) {
         let pair1 = {};
         pair1.id = i;
-        pair1.id = i;
+        pair1.value = i;
 
         let pair2 = {};
         pair2.id = i + gamePairs;
