@@ -1,5 +1,9 @@
-//Variable for game data
+// Variable for game data
 let gameCards = [];
+
+// Variables for game memory
+let cardsToCheckId = [];
+let cardsToCheckValue = [];
 
 // Pairs of cards for each difficulty
 const difficultyPairs = {
@@ -102,22 +106,37 @@ function renderCards() {
         addCardEvents(card);
     }
 }
-
+// Adds showCard function to card passed when clicked
 function addCardEvents(card) {
     card.addEventListener("click", showCard);
 }
-
+// Removed showCard function from card passed so it will not be turned when clicked
 function removeCardEvents(card) {
     card.removeEventListener("click", showCard);
 }
-
+// Shows value on hidden side of card, populates game memory arrays
 function showCard(e) {
     let card = e.target.parentNode;
+    let id = e.target.parentNode.id;
     let cardBack = e.target.parentNode.querySelector(".back");
     let cardFront = e.target.parentNode.querySelector(".front");
+    let value = cardFront.innerHTML;
 
     cardBack.classList.toggle("hidden");
     cardFront.classList.toggle("hidden");
 
     removeCardEvents(card);
+
+    cardsToCheckId.push(id);
+    cardsToCheckValue.push(value);
+
+    if(cardsToCheckValue.length === 2) {
+        let cards = document.querySelectorAll(".card-container");
+        cards.forEach((card) => removeCardEvents(card));
+        setTimeout(checkCards, 300);
+    }
+}
+
+function checkCards() {
+    console.log("CHECK!");
 }
