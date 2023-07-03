@@ -68,9 +68,15 @@ function clearGame() {
     gameCards = [];
     cardsBoard.innerHTML = "";
 }
+// Clear pair check memory
+function clearMemory(){
+    cardsToCheckId = [];
+    cardsToCheckValue = [];
+}
 // Create and shuffle game cards from chosen difficulty 
 function createGame(chosenDifficulty) {
     clearGame();
+    clearMemory();
     let gamePairs = difficultyPairs[chosenDifficulty];
     // For loop creates two cards with same value but unique id's
     for (let i = 1; i <= gamePairs; i++) {
