@@ -99,7 +99,6 @@ function renderCards() {
     for (let i = 0; i < gameCards.length; i++) {
         let card = document.createElement("div");
         card.classList.add("card-container");
-        card.id = gameCards[i].id;
 
         let cardFront = document.createElement("div");
         cardFront.classList.add("card", "front", "hidden");
@@ -108,11 +107,12 @@ function renderCards() {
         let cardBack = document.createElement("div");
         cardBack.classList.add("card", "back");
         cardBack.innerHTML = "?";
+        cardBack.id = gameCards[i].id;
 
         cardsBoard.appendChild(card);
         card.appendChild(cardFront);
         card.appendChild(cardBack);
-        
+
         addCardEvents(cardBack);
     }
 }
@@ -120,33 +120,30 @@ function renderCards() {
 function addCardEvents(card) {
     card.addEventListener("click", showCard);
 }
-// Removed showCard function from card passed so it will not be turned when clicked
+// Removes showCard function from card passed so it will not be turned when clicked
 function removeCardEvents(card) {
     card.removeEventListener("click", showCard);
 }
 // Shows value on hidden side of card, populates game memory arrays
 function showCard(e) {
-    let card = e.target.parentNode;
-    let id = e.target.parentNode.id;
-    let cardBack = e.target.parentNode.querySelector(".back");
+    let cardBack = e.target;
+    let id = cardBack.id;
     let cardFront = e.target.parentNode.querySelector(".front");
     let value = cardFront.innerHTML;
 
     cardBack.classList.toggle("hidden");
     cardFront.classList.toggle("hidden");
 
-    removeCardEvents(card);
-
     cardsToCheckId.push(id);
     cardsToCheckValue.push(value);
 
     if(cardsToCheckValue.length === 2) {
-        let cards = document.querySelectorAll(".card");
-        cards.forEach((card) => removeCardEvents(card));
+        let unturned = document.querySelectorAll(".back");
+        unturned.forEach((card) => removeCardEvents(card));
         setTimeout(checkCards, 300);
     }
 }
-
+// Checks cards saved to game memory for matching values
 function checkCards() {
     console.log("CHECK!");
 }
