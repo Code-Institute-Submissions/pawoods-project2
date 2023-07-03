@@ -1,5 +1,6 @@
 // Variable for game data
 let gameCards = [];
+let matchedPairs = [];
 
 // Variables for game memory
 let cardsToCheckId = [];
@@ -149,7 +150,22 @@ function showCard(e) {
         setTimeout(checkCards, 300);
     }
 }
-// Checks cards saved to game memory for matching values
+// Checks cards in game memory for matching values
 function checkCards() {
-    console.log("CHECK!");
+    let value1 = cardsToCheckValue[0];
+    let value2 = cardsToCheckValue[1];
+    let id1 = cardsToCheckId[0];
+    let id2 = cardsToCheckId[1];
+    let card1 = document.getElementById(`${id1}`).parentNode.querySelectorAll(".card");
+    let card2 = document.getElementById(`${id2}`).parentNode.querySelectorAll(".card");
+
+    if (value1 === value2) {
+        matchedPairs.push(value1, value2);
+    } else {
+        card1.forEach((side) => side.classList.toggle("hidden"));
+        card2.forEach((side) => side.classList.toggle("hidden"));
+    }
+    clearMemory();
+    let unturned = document.querySelectorAll(".back");
+    unturned.forEach((card) => addCardEvents(card));
 }
