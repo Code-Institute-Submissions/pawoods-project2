@@ -100,10 +100,20 @@ function renderCards() {
         let card = document.createElement("div");
         card.classList.add("card-container");
         card.id = gameCards[i].id;
-        card.innerHTML = `<div class="card back">?</div>
-                        <div class="card front hidden">${gameCards[i].value}</div>`;
+
+        let cardFront = document.createElement("div");
+        cardFront.classList.add("card", "front", "hidden");
+        cardFront.innerHTML = gameCards[i].value;
+
+        let cardBack = document.createElement("div");
+        cardBack.classList.add("card", "back");
+        cardBack.innerHTML = "?";
+
         cardsBoard.appendChild(card);
-        addCardEvents(card);
+        card.appendChild(cardFront);
+        card.appendChild(cardBack);
+        
+        addCardEvents(cardBack);
     }
 }
 // Adds showCard function to card passed when clicked
@@ -131,7 +141,7 @@ function showCard(e) {
     cardsToCheckValue.push(value);
 
     if(cardsToCheckValue.length === 2) {
-        let cards = document.querySelectorAll(".card-container");
+        let cards = document.querySelectorAll(".card");
         cards.forEach((card) => removeCardEvents(card));
         setTimeout(checkCards, 300);
     }
