@@ -2,11 +2,13 @@
 // Variable for game data
 let gameCards = [];
 let matchedPairs = [];
+let currentTries = 0;
+let maxTime = 30;
+let elapsedTime = 0;
 
 // Variables for game memory
 let cardsToCheckId = [];
 let cardsToCheckValue = [];
-let currentTries = 0;
 
 // Pairs of cards for each difficulty
 const difficultyPairs = {
@@ -28,6 +30,10 @@ const themeButton = document.querySelector(".theme");
 const homeButtons = document.querySelectorAll(".title");
 const contactButtons = document.querySelectorAll(".contact-button");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
+
+// Game counters
+const timer = document.querySelector(".timer");
+const score = document.querySelector(".score");
 
 // Event Listeners
 homeButtons.forEach((button) => button.addEventListener("click", showHomeScreen));
