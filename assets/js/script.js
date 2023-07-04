@@ -24,6 +24,7 @@ const gameScreen = document.querySelector(".game");
 const endScreen = document.querySelector(".end");
 const contactScreen = document.querySelector(".contact");
 const cardsBoard = document.querySelector(".cards-board");
+const endMessage = document.querySelector(".message-container");
 
 // Buttons
 const themeButton = document.querySelector(".theme");
@@ -78,6 +79,7 @@ function clearGame() {
     cardsBoard.innerHTML = "";
     matchedPairs = [];
     currentTries = 0;
+    endMessage.innerHTML = "";
 }
 // Clear pair check memory
 function clearMemory(){
@@ -186,4 +188,21 @@ function checkCards() {
 // Shows end screen
 function endGame() {
     showEndScreen();
+
+    let message = document.createElement("p");
+    message.classList.add("message");
+
+    let winScore = document.createElement("p");
+    winScore.classList.add("winning-score");
+
+    if (matchedPairs.length === gameCards.length) {
+        message.innerHTML = `Well done, you found all ${matchedPairs.length / 2} pairs!`;
+        winScore.innerHTML = `Your Score: ${currentTries}`;
+        endMessage.appendChild(message);
+        endMessage.appendChild(winScore);
+    } else {
+        message.innerHTML = `You only found ${matchedPairs.length / 2} out of ${gameCards.length / 2} pairs<br>
+                            Better luck next time!`
+        endMessage.appendChild(message);
+    }
 }
