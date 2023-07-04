@@ -71,6 +71,7 @@ function clearGame() {
     gameCards = [];
     cardsBoard.innerHTML = "";
     matchedPairs = [];
+    currentTries = 0;
 }
 // Clear pair check memory
 function clearMemory(){

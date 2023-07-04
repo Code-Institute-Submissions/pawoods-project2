@@ -68,7 +68,8 @@
 4. Bug found when renderCards function was called, it would add a new set of cards to the inner HTML of the cards board.
 - Fixed by adding a clearing line of code within clearGame function to set innerHTML to "".
 ---
-
+5. Bug found where current tries count wasn't reset when a new game was restarted.
+- Fixed by resetting currentTries variable to 0 within clearGame function.
 
 #### Unfixed Bugs
 
