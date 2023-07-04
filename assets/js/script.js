@@ -1,3 +1,4 @@
+// Global variables
 // Variable for game data
 let gameCards = [];
 let matchedPairs = [];
@@ -68,6 +69,7 @@ function showContactScreen() {
 function clearGame() {
     gameCards = [];
     cardsBoard.innerHTML = "";
+    matchedPairs = [];
 }
 // Clear pair check memory
 function clearMemory(){
@@ -168,4 +170,11 @@ function checkCards() {
     clearMemory();
     let unturned = document.querySelectorAll(".back");
     unturned.forEach((card) => addCardEvents(card));
+    if (matchedPairs.length === gameCards.length) {
+        endGame();
+    }
+}
+// Shows end screen
+function endGame() {
+    showEndScreen();
 }
