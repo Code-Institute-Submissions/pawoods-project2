@@ -6,6 +6,7 @@ let matchedPairs = [];
 // Variables for game memory
 let cardsToCheckId = [];
 let cardsToCheckValue = [];
+let currentTries = 0;
 
 // Pairs of cards for each difficulty
 const difficultyPairs = {
@@ -150,6 +151,7 @@ function showCard(e) {
         let unturned = document.querySelectorAll(".back");
         unturned.forEach((card) => removeCardEvents(card));
         setTimeout(checkCards, 300);
+        currentTries++;
     }
 }
 // Checks cards in game memory for matching values
