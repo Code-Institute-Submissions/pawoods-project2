@@ -70,6 +70,11 @@
 ---
 5. Bug found where current tries count wasn't reset when a new game was restarted.
 - Fixed by resetting currentTries variable to 0 within clearGame function.
+---
+6. Bug found where interval would be set twice within startTimer function, incrementing the seconds count twice as quickly as intended.
+- Fixed by declaring the timeInterval variable globally and clearing the interval before setting it within the startTimer function. 
+---
+
 
 #### Unfixed Bugs
 

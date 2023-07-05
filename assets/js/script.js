@@ -5,6 +5,7 @@ let matchedPairs = [];
 let currentTries = 0;
 let maxTime = 30;
 let elapsedTime = 0;
+let timerInterval;
 
 // Variables for game memory
 let cardsToCheckId = [];
@@ -79,7 +80,10 @@ function clearGame() {
     cardsBoard.innerHTML = "";
     matchedPairs = [];
     currentTries = 0;
-    endMessage.innerHTML = "";
+    elapsedTime = 0;
+    timer.innerHTML = elapsedTime;
+    score.innerHTML = 0;
+    endMessage.innerHTML = "";    
 }
 // Clear pair check memory
 function clearMemory(){
@@ -112,6 +116,7 @@ function createGame(chosenDifficulty) {
     }
     showGameScreen();
     renderCards();
+    startTimer();
 }
 // Render cards within game screen and adds event listeners for highlighting
 function renderCards() {
@@ -142,6 +147,29 @@ function addCardEvents(card) {
 // Removes showCard function from card passed so it will not be turned when clicked
 function removeCardEvents(card) {
     card.removeEventListener("click", showCard);
+}
+// Timer function learned through https://www.w3schools.com/js/js_timing.asp
+function startTimer() {
+    clearInterval(timerInterval);
+    timerInterval = setInterval(addSeconds, 1000);
+    function addSeconds() {
+        if (matchedPairs.length === gameCards.length) {
+            console.log("WINNER!");
+            clearInterval(timerInterval);
+            endGame();
+        } else if (gameScreen.classList.contains("hidden")) {
+            console.log("QUITTER!");
+            clearInterval(timerInterval);
+        } else if (elapsedTime === maxTime) {
+            console.log("LOSER!");
+            clearInterval(timerInterval);
+            endGame();
+        } else {
+            elapsedTime++;
+            timer.innerHTML = elapsedTime;
+            score.innerHTML = elapsedTime + currentTries;
+        }
+    }
 }
 // Shows value on hidden side of card, populates game memory arrays
 function showCard(e) {
@@ -181,9 +209,6 @@ function checkCards() {
     clearMemory();
     let unturned = document.querySelectorAll(".back");
     unturned.forEach((card) => addCardEvents(card));
-    if (matchedPairs.length === gameCards.length) {
-        endGame();
-    }
 }
 // Shows end screen
 function endGame() {

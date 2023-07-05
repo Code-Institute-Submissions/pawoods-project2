@@ -63,6 +63,10 @@ body * {
     text-align: center;
 }
 
+.front {
+    background-color: #6aa995;
+}
+
 .hidden {
     display: none;
 }
