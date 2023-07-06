@@ -6,6 +6,7 @@ let currentTries = 0;
 let maxTime = 30;
 let elapsedTime = 0;
 let timerInterval;
+let bonusScore = 50;
 
 // Variables for game memory
 let cardsToCheckId = [];
@@ -32,6 +33,7 @@ const themeButton = document.querySelector(".theme");
 const homeButtons = document.querySelectorAll(".title");
 const contactButtons = document.querySelectorAll(".contact-button");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
+const extremeButton = document.querySelector("#extreme");
 
 // Game counters
 const timer = document.querySelector(".timer");
@@ -83,7 +85,8 @@ function clearGame() {
     elapsedTime = 0;
     timer.innerHTML = elapsedTime;
     score.innerHTML = 0;
-    endMessage.innerHTML = "";    
+    endMessage.innerHTML = "";
+    extremeButton.classList.add("hidden");   
 }
 // Clear pair check memory
 function clearMemory(){
@@ -222,12 +225,32 @@ function endGame() {
 
     if (matchedPairs.length === gameCards.length) {
         message.innerHTML = `Well done, you found all ${matchedPairs.length / 2} pairs!`;
-        winScore.innerHTML = `Your Score: ${currentTries}`;
+        winScore.innerHTML = `Your Score: ${currentTries + elapsedTime}`;
         endMessage.appendChild(message);
         endMessage.appendChild(winScore);
+        if (gameCards.length / 2 === difficultyPairs.hard) {
+            checkBonus();
+        }
     } else {
         message.innerHTML = `You only found ${matchedPairs.length / 2} out of ${gameCards.length / 2} pairs<br>
                             Better luck next time!`
         endMessage.appendChild(message);
+    }
+}
+// Checks whether bonus round has been unlocked
+function checkBonus() {
+    let bonusMessage = document.createElement("p");
+    bonusMessage.classList.add("bonus-message");
+
+    if (currentTries + elapsedTime <= bonusScore) {
+        console.log("BONUS!");
+        bonusMessage.innerHTML = `You unlocked the EXTREME bonus round!<br>
+        Prepare yourself, you only get one chance.<br>
+        Good Luck!`
+        extremeButton.classList.remove("hidden");
+    } else {
+        console.log("NO BONUS!");
+        bonusMessage.innerHTML = `Unlucky! You scored ${currentTries + elapsedTime}.<br>
+        Try again for ${bonusScore} points or less to unlock the EXTREME bonus round!`
     }
 }
