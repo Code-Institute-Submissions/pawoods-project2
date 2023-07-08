@@ -93,9 +93,13 @@ body * {
 }
 
 .button {
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-family: "Satisfy", cursive;
-    font-size: 1rem;
+    font-size: 1.2em;
+    background-color: var(--text);
+    color: var(--background);
+    border: 2px solid var(--background);
+    border-radius: 1em;
 }
 
 .game-header {
@@ -135,6 +139,11 @@ body * {
 
 .front {
     background-color: var(--card-front);
+}
+
+.winning-score {
+    font-family: "Satisfy", cursive;
+    font-size: 2em;
 }
 
 .social, .contact-button {

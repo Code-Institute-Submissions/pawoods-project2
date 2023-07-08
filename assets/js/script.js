@@ -257,6 +257,11 @@ function endGame() {
         endMessage.appendChild(winScore);
         if (gameCards.length / 2 === difficultyPairs.hard) {
             checkBonus();
+        } else {
+            let tryHarder = document.createElement("p");
+            tryHarder.innerHTML = `Try a harder difficulty for more of a challenge.<br>
+            See if you can unlock the EXTREME bonus round!`;
+            endMessage.appendChild(tryHarder);
         }
     } else {
         message.innerHTML = `You only found ${matchedPairs.length / 2} out of ${gameCards.length / 2} pairs<br>
@@ -277,7 +282,9 @@ function checkBonus() {
         extremeButton.classList.remove("hidden");
     } else {
         console.log("NO BONUS!");
-        bonusMessage.innerHTML = `Unlucky! You scored ${currentTries + elapsedTime}.<br>
+        bonusMessage.innerHTML = `Unlucky!<br>
+        You scored ${currentTries + elapsedTime}.<br>
         Try hard mode again for ${bonusScore} points or less to unlock the EXTREME bonus round!`
     }
+    endMessage.appendChild(bonusMessage);
 }
