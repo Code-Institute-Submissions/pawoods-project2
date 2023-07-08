@@ -30,6 +30,7 @@ const endMessage = document.querySelector(".message-container");
 
 // Buttons
 const themeButton = document.querySelector(".theme");
+const themeIcon = document.querySelector(".theme-icon");
 const homeButtons = document.querySelectorAll(".title");
 const contactButtons = document.querySelectorAll(".contact-button");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
@@ -40,6 +41,7 @@ const timer = document.querySelector(".timer");
 const score = document.querySelector(".score");
 
 // Event Listeners
+themeButton.addEventListener("click", toggleTheme);
 homeButtons.forEach((button) => button.addEventListener("click", showHomeScreen));
 contactButtons.forEach((button) => button.addEventListener("click", showContactScreen));
 difficultyButtons.forEach((button) => button.addEventListener("click", function(e) {
@@ -48,6 +50,18 @@ difficultyButtons.forEach((button) => button.addEventListener("click", function(
 }));
 
 // Functions
+
+function toggleTheme() {
+    if (themeIcon.classList.contains("light")){
+        themeIcon.classList.add("dark");
+        themeIcon.classList.remove("light");
+        themeIcon.innerHTML = `<i class="fa-solid fa-moon" aria-hidden="true"></i>`
+    } else {
+        themeIcon.classList.remove("dark");
+        themeIcon.classList.add("light");
+        themeIcon.innerHTML = `<i class="fa-solid fa-sun" aria-hidden="true"></i>`
+    }
+}
 // Show only home screen
 function showHomeScreen() {
     startScreen.classList.remove("hidden");

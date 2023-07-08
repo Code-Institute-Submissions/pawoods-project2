@@ -28,6 +28,31 @@ body * {
     justify-content: space-evenly;
 }
 
+.theme {
+    display: flex;
+    width: 45px;
+    padding: 2px;
+    border: 2px solid var(--text);
+    border-radius: 15px;
+    background-color: var(--screen);
+    align-items: flex-end;
+}
+
+.theme-icon {
+    color: var(--text);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.light {
+    justify-content: flex-end;
+}
+
+.dark {
+    justify-content: flex-start;
+}
+
 .main {
     height: 80vh;
     display: flex;
