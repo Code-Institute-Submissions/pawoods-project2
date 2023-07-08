@@ -34,7 +34,7 @@ const endMessage = document.querySelector(".message-container");
 // Buttons
 const themeButton = document.querySelector(".theme");
 const themeIcon = document.querySelector(".theme-icon");
-const homeButtons = document.querySelectorAll(".title");
+const homeButtons = document.querySelectorAll(".home");
 const contactButtons = document.querySelectorAll(".contact-button");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
 const extremeButton = document.querySelector("#extreme");
@@ -278,6 +278,6 @@ function checkBonus() {
     } else {
         console.log("NO BONUS!");
         bonusMessage.innerHTML = `Unlucky! You scored ${currentTries + elapsedTime}.<br>
-        Try again for ${bonusScore} points or less to unlock the EXTREME bonus round!`
+        Try hard mode again for ${bonusScore} points or less to unlock the EXTREME bonus round!`
     }
 }
