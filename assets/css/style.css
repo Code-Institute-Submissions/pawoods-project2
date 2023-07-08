@@ -3,7 +3,7 @@
     --screen: rgb(220, 220, 220);
     --card-front: rgb(155, 248, 255);
     --card-back: rgb(157, 188, 191);
-    --text: rgb(0, 0, 0);
+    --text: rgb(2, 33, 63);
 
 }
 
@@ -107,7 +107,7 @@ body * {
 
 .card {
     height: 100%;
-    border: 2px solid black;
+    border: 2px solid var(--text);
     border-radius: 5px;
     display: flex;
     align-items: center;

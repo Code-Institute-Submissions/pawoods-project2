@@ -12,6 +12,9 @@ let bonusScore = 50;
 let cardsToCheckId = [];
 let cardsToCheckValue = [];
 
+// Root CSS variables
+const r = document.querySelector(":root");
+
 // Pairs of cards for each difficulty
 const difficultyPairs = {
     "easy": 8,
@@ -56,10 +59,20 @@ function toggleTheme() {
         themeIcon.classList.add("dark");
         themeIcon.classList.remove("light");
         themeIcon.innerHTML = `<i class="fa-solid fa-moon" aria-hidden="true"></i>`
+        r.style.setProperty("--background", "rgb(2, 33, 63)")
+        r.style.setProperty("--screen", "rgb(2, 33, 63)")
+        r.style.setProperty("--card-front", "rgb(60, 120, 120)")
+        r.style.setProperty("--card-back", "rgb(15, 75, 95)")
+        r.style.setProperty("--text", "rgb(255, 255, 255)")
     } else {
         themeIcon.classList.remove("dark");
         themeIcon.classList.add("light");
         themeIcon.innerHTML = `<i class="fa-solid fa-sun" aria-hidden="true"></i>`
+        r.style.setProperty("--background", "rgb(255, 255, 255)")
+        r.style.setProperty("--screen", "rgb(220, 220, 220)")
+        r.style.setProperty("--card-front", "rgb(155, 248, 255)")
+        r.style.setProperty("--card-back", "rgb(157, 188, 191)")
+        r.style.setProperty("--text", "rgb(2, 33, 63)")
     }
 }
 // Show only home screen
