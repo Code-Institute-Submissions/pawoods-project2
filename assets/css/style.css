@@ -24,11 +24,56 @@ body * {
 .header,
 .footer {
     width: 100%;
-    height: 10vh;
+    min-height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 90%;
+    padding: 10px 20px;
+    background-color: var(--screen);
+    border-radius: 10px;
+    border: 5px solid var(--text);
+    color: var(--text);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.close {
+    font-size: 20px;
+}
+
+.modal-content ul {
+    padding-inline-start: 20px;
+}
+
+h1 {
+    margin: 0;
 }
 
 .title {
