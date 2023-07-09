@@ -268,7 +268,12 @@ function endGame() {
         winScore.innerHTML = `Your Score: ${currentTries + elapsedTime}`;
         endMessage.appendChild(message);
         endMessage.appendChild(winScore);
-        if (gameCards.length / 2 === difficultyPairs.hard) {
+        if (gameCards.length / 2 === difficultyPairs.extreme) {
+            let extremeWin = document.createElement("p");
+            extremeWin.innerHTML = `You beat the EXTREME bonus round!<br>
+            Can you do it again?`
+            endMessage.appendChild(extremeWin);
+        } else if (gameCards.length / 2 === difficultyPairs.hard) {
             checkBonus();
         } else {
             let tryHarder = document.createElement("p");
