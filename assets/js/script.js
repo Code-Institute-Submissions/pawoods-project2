@@ -58,7 +58,6 @@ difficultyButtons.forEach((button) => button.addEventListener("click", function(
 }));
 
 // Functions
-
 function toggleTheme() {
     if (themeIcon.classList.contains("light")){
         themeIcon.classList.add("dark");
@@ -306,3 +305,20 @@ function checkBonus() {
     }
     endMessage.appendChild(bonusMessage);
 }
+
+// Sends email from contact form learned from https://www.emailjs.com/docs/tutorial/creating-contact-form/
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    emailjs.send("pa.woods", "snap", {
+        "user_name": this.user_name.value,
+        "user_email": this.user_email.value,
+        "user_message": this.user_message.value
+    })
+    .then(function() {
+        console.log("Success");
+        e.target.reset();
+    },
+    function(error) {
+        console.log("Error", error);
+    });
+})

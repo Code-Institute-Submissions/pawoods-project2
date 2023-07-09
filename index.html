@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/1704febde4.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('X7_7dObeiya61iMMz');
+        })();
+    </script>
     <title>SNAP!</title>
 </head>
 
@@ -90,16 +96,16 @@
 
         <!-- contact screen -->
         <div class="contact screen hidden">
-            <form action="">
+            <form id="contact-form">
                 <h2 class="title">Get In Touch!</h2>
                 <p>Please complete the form below to submit any feedback you may have on
                     <span class="title">SNAP!</span>
                 </p>
-                <input type="text" class="input" placeholder="Name">
-                <input type="email" class="input" placeholder="Email">
-                <textarea name="message" id="message" class="input" placeholder="Type your message here..."></textarea>
+                <input type="text" name="user_name" class="input" placeholder="Name" required>
+                <input type="email" name="user_email" class="input" placeholder="Email" required>
+                <textarea name="user_message" id="message" class="input" placeholder="Type your message here..." required></textarea>
                 <div class="form-buttons">
-                    <button type="submit" class="submit button">Send!</button>
+                    <input type="submit" class="submit button" value="Send!">
                     <button type="reset" class="reset button">Clear Form</button>
                 </div>
             </form>
