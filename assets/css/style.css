@@ -19,6 +19,7 @@ body {
 
 body * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 .header,
@@ -70,10 +71,6 @@ body * {
 
 .modal-content ul {
     padding-inline-start: 20px;
-}
-
-h1 {
-    margin: 0;
 }
 
 .title {
@@ -175,7 +172,7 @@ h1 {
     align-items: center;
     justify-content: center;
     font-family: "Satisfy", cursive;
-    font-size: 2em;
+    font-size: 4vh;
 }
 
 .back {
@@ -184,6 +181,13 @@ h1 {
 
 .front {
     background-color: var(--card-front);
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
 }
 
 .winning-score {

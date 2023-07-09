@@ -40,7 +40,7 @@ const contactButtons = document.querySelectorAll(".contact-button");
 const rulesButton = document.querySelector(".rules");
 const closeButton = document.querySelector(".close");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
-const extremeButton = document.querySelector("#extreme");
+const extremeButton = document.querySelector(".extreme");
 
 // Game counters
 const timer = document.querySelector(".timer");
