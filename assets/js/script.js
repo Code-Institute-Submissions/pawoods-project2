@@ -30,12 +30,15 @@ const endScreen = document.querySelector(".end");
 const contactScreen = document.querySelector(".contact");
 const cardsBoard = document.querySelector(".cards-board");
 const endMessage = document.querySelector(".message-container");
+const rulesModal = document.querySelector(".modal");
 
 // Buttons
 const themeButton = document.querySelector(".theme");
 const themeIcon = document.querySelector(".theme-icon");
 const homeButtons = document.querySelectorAll(".home");
 const contactButtons = document.querySelectorAll(".contact-button");
+const rulesButton = document.querySelector(".rules");
+const closeButton = document.querySelector(".close");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
 const extremeButton = document.querySelector("#extreme");
 
@@ -45,6 +48,8 @@ const score = document.querySelector(".score");
 
 // Event Listeners
 themeButton.addEventListener("click", toggleTheme);
+rulesButton.addEventListener("click", showRules);
+closeButton.addEventListener("click", closeRules);
 homeButtons.forEach((button) => button.addEventListener("click", showHomeScreen));
 contactButtons.forEach((button) => button.addEventListener("click", showContactScreen));
 difficultyButtons.forEach((button) => button.addEventListener("click", function(e) {
@@ -74,6 +79,14 @@ function toggleTheme() {
         r.style.setProperty("--card-back", "rgb(157, 188, 191)")
         r.style.setProperty("--text", "rgb(2, 33, 63)")
     }
+}
+// Show rules modal
+function showRules() {
+    rulesModal.classList.remove("hidden");
+}
+// Close rules modal
+function closeRules() {
+    rulesModal.classList.add("hidden");
 }
 // Show only home screen
 function showHomeScreen() {
