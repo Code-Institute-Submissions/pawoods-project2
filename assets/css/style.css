@@ -195,6 +195,17 @@ body * {
     font-size: 2em;
 }
 
+form .input {
+    color: var(--text);
+    background-color: var(--background);
+    border: 2px solid var(--text);
+    border-radius: 5px;
+    width: 80%;
+    margin: 5px 0;
+    padding: 5px;
+    font-family: "Pathway Extreme", sans-serif;
+}
+
 .social, .contact-button {
     font-size: 32px;
 }
