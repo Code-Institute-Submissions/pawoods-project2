@@ -313,6 +313,9 @@ function checkBonus() {
 // Sends email from contact form learned from https://www.emailjs.com/docs/tutorial/creating-contact-form/
 document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
+    let submitButton = document.querySelector(".submit");
+    submitButton.disabled = true;
+    submitButton.value = `...`
     emailjs.send("pa.woods", "snap", {
         "user_name": this.user_name.value,
         "user_email": this.user_email.value,
@@ -322,9 +325,13 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
         console.log("Success");
         e.target.reset();
         thankYouOpen();
+        submitButton.disabled = false;
+        submitButton.value = `Send!`
     },
     function(error) {
         console.log("Error", error);
+        submitButton.disabled = false;
+        submitButton.value = `Send!`
     });
 })
 
