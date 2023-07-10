@@ -53,16 +53,12 @@ body * {
     border-radius: 10px;
     border: 5px solid var(--text);
     color: var(--text);
+    text-align: center;
 }
 
 .modal-header {
     display: flex;
     justify-content: space-between;
-}
-
-.modal-content h2 {
-    text-align: center;
-    margin: 0;
 }
 
 .close {
@@ -71,6 +67,7 @@ body * {
 
 .modal-content ul {
     padding-inline-start: 20px;
+    text-align: left;
 }
 
 .title {

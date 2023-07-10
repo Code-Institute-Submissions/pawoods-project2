@@ -40,11 +40,12 @@
                 Find matching numbers within the 30 second time limit to win!
             </p>
             <button class="rules button">How to play</button>
-            <div class="modal hidden">
-                <div class="modal-content">
+            <!-- Modal opens on button click -->
+            <div class="rules modal hidden">
+                <div class="rules modal-content">
                     <div class="modal-header">
                         <h2 class="title">How To Play</h2>
-                        <span class="close">X</span>
+                        <span class="rules close">X</span>
                     </div>
                     <ul class="rules">
                         <li>Choose a difficulty to begin the 30 seconds timer.</li>
@@ -57,6 +58,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- End of Modal -->
             <p>Choose a difficulty level to begin.</p>
             <div class="difficulty-buttons">
                 <button id="easy" class="easy button">Easy</button>
@@ -105,10 +107,20 @@
                 <input type="email" name="user_email" class="input" placeholder="Email" required>
                 <textarea name="user_message" id="message" class="input" placeholder="Type your message here..." required></textarea>
                 <div class="form-buttons">
-                    <input type="submit" class="submit button" value="Send!">
+                    <input type="submit" class="submit button" value="Send!">                    
                     <button type="reset" class="reset button">Clear Form</button>
                 </div>
             </form>
+            <!-- Confirmation modal opens on form submit -->
+            <div class="confirmation modal hidden">
+                <div class="confirmation modal-content">
+                    <div class="confirmation modal-header">
+                        <h2 class="title">Thank You!</h2>
+                        <span class="confirmation close">X</span>
+                    </div>
+                    <p>Your message has been sent, we will aim to get back to you in the following 48 hours.</p>
+                </div>
+            </div>
             <button class="home button">Home</button>
         </div>
     </main>

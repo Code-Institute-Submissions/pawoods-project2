@@ -30,15 +30,17 @@ const endScreen = document.querySelector(".end");
 const contactScreen = document.querySelector(".contact");
 const cardsBoard = document.querySelector(".cards-board");
 const endMessage = document.querySelector(".message-container");
-const rulesModal = document.querySelector(".modal");
+const rulesModal = document.querySelector(".rules.modal");
+const confirmationModal = document.querySelector(".confirmation.modal")
 
 // Buttons
 const themeButton = document.querySelector(".theme");
 const themeIcon = document.querySelector(".theme-icon");
 const homeButtons = document.querySelectorAll(".home");
 const contactButtons = document.querySelectorAll(".contact-button");
-const rulesButton = document.querySelector(".rules");
-const closeButton = document.querySelector(".close");
+const rulesButton = document.querySelector(".rules.button");
+const rulesClose = document.querySelector(".rules.close");
+const confirmationClose = document.querySelector(".confirmation.close");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
 const extremeButton = document.querySelector(".extreme");
 
@@ -49,15 +51,17 @@ const score = document.querySelector(".score");
 // Event Listeners
 themeButton.addEventListener("click", toggleTheme);
 rulesButton.addEventListener("click", showRules);
-closeButton.addEventListener("click", closeRules);
+rulesClose.addEventListener("click", closeRules);
 homeButtons.forEach((button) => button.addEventListener("click", showHomeScreen));
 contactButtons.forEach((button) => button.addEventListener("click", showContactScreen));
 difficultyButtons.forEach((button) => button.addEventListener("click", function(e) {
     let difficulty = e.target.id;
     createGame(difficulty);
 }));
+confirmationClose.addEventListener("click", thankYouClose);
 
 // Functions
+
 function toggleTheme() {
     if (themeIcon.classList.contains("light")){
         themeIcon.classList.add("dark");
@@ -317,8 +321,17 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     .then(function() {
         console.log("Success");
         e.target.reset();
+        thankYouOpen();
     },
     function(error) {
         console.log("Error", error);
     });
 })
+
+function thankYouOpen() {
+    confirmationModal.classList.remove("hidden");
+}
+
+function thankYouClose() {
+    confirmationModal.classList.add("hidden");
+}
