@@ -141,6 +141,18 @@ body * {
     border-radius: 1em;
 }
 
+.difficulty-buttons .button, .submit {
+    background-color: var(--card-back);
+    color: var(--text);
+    border-color: var(--text);
+}
+
+.button:hover {
+    background-color: var(--card-front);
+    color: var(--text);
+    border-color: var(--text);
+}
+
 .game-header {
     display: flex;
     flex-direction: row;
@@ -174,6 +186,10 @@ body * {
 
 .back {
     background-color: var(--card-back);
+}
+
+.back:hover {
+    box-shadow: 5px 5px 20px var(--text);
 }
 
 .front {
