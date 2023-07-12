@@ -141,7 +141,8 @@ body * {
     border-radius: 1em;
 }
 
-.difficulty-buttons .button, .submit {
+.difficulty-buttons .button,
+.submit {
     background-color: var(--card-back);
     color: var(--text);
     border-color: var(--text);
@@ -151,6 +152,10 @@ body * {
     background-color: var(--card-front);
     color: var(--text);
     border-color: var(--text);
+}
+
+.button:disabled {
+    cursor: not-allowed;
 }
 
 .game-header {
@@ -219,7 +224,12 @@ form .input {
     font-family: "Pathway Extreme", sans-serif;
 }
 
-.social, .contact-button {
+textarea {
+    resize: none;
+}
+
+.social,
+.contact-button {
     font-size: 32px;
 }
 
