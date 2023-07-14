@@ -21,7 +21,7 @@ const difficultyPairs = {
     "medium": 10,
     "hard": 12,
     "extreme": 14
-}
+};
 
 // Screens and containers
 const startScreen = document.querySelector(".start");
@@ -30,8 +30,9 @@ const endScreen = document.querySelector(".end");
 const contactScreen = document.querySelector(".contact");
 const cardsBoard = document.querySelector(".cards-board");
 const endMessage = document.querySelector(".message-container");
-const rulesModal = document.querySelector(".rules.modal");
-const confirmationModal = document.querySelector(".confirmation.modal")
+const modalBackground = document.querySelector(".modal");
+const rulesModal = document.querySelector(".rules.modal-content");
+const confirmationModal = document.querySelector(".confirmation.modal-content");
 
 // Buttons
 const themeButton = document.querySelector(".theme");
@@ -39,8 +40,8 @@ const themeIcon = document.querySelector(".theme-icon");
 const homeButtons = document.querySelectorAll(".home");
 const contactButtons = document.querySelectorAll(".contact-button");
 const rulesButton = document.querySelector(".rules.button");
-const rulesClose = document.querySelector(".rules.close");
-const confirmationClose = document.querySelector(".confirmation.close");
+const modalClose = document.querySelectorAll(".close");
+// const confirmationClose = document.querySelector(".confirmation.close");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
 const extremeButton = document.querySelector(".extreme");
 
@@ -51,45 +52,38 @@ const score = document.querySelector(".score");
 // Event Listeners
 themeButton.addEventListener("click", toggleTheme);
 rulesButton.addEventListener("click", showRules);
-rulesClose.addEventListener("click", closeRules);
+// rulesClose.addEventListener("click", closeRules);
 homeButtons.forEach((button) => button.addEventListener("click", showHomeScreen));
 contactButtons.forEach((button) => button.addEventListener("click", showContactScreen));
-difficultyButtons.forEach((button) => button.addEventListener("click", function(e) {
+difficultyButtons.forEach((button) => button.addEventListener("click", function (e) {
     let difficulty = e.target.id;
     createGame(difficulty);
 }));
-confirmationClose.addEventListener("click", thankYouClose);
+// confirmationClose.addEventListener("click", thankYouClose);
+modalClose.forEach((button) => button.addEventListener("click", closeModal));
 
 // Functions
 
 function toggleTheme() {
-    if (themeIcon.classList.contains("light")){
+    if (themeIcon.classList.contains("light")) {
         themeIcon.classList.add("dark");
         themeIcon.classList.remove("light");
-        themeIcon.innerHTML = `<i class="fa-solid fa-moon" aria-hidden="true"></i>`
-        r.style.setProperty("--background", "rgb(2, 33, 63)")
-        r.style.setProperty("--screen", "rgb(2, 33, 63)")
-        r.style.setProperty("--card-front", "rgb(60, 120, 120)")
-        r.style.setProperty("--card-back", "rgb(15, 75, 95)")
-        r.style.setProperty("--text", "rgb(255, 255, 255)")
+        themeIcon.innerHTML = `<i class="fa-solid fa-moon" aria-hidden="true"></i>`;
+        r.style.setProperty("--background", "rgb(2, 33, 63)");
+        r.style.setProperty("--screen", "rgb(2, 33, 63)");
+        r.style.setProperty("--card-front", "rgb(60, 120, 120)");
+        r.style.setProperty("--card-back", "rgb(15, 75, 95)");
+        r.style.setProperty("--text", "rgb(255, 255, 255)");
     } else {
         themeIcon.classList.remove("dark");
         themeIcon.classList.add("light");
-        themeIcon.innerHTML = `<i class="fa-solid fa-sun" aria-hidden="true"></i>`
-        r.style.setProperty("--background", "rgb(255, 255, 255)")
-        r.style.setProperty("--screen", "rgb(220, 220, 220)")
-        r.style.setProperty("--card-front", "rgb(155, 248, 255)")
-        r.style.setProperty("--card-back", "rgb(157, 188, 191)")
-        r.style.setProperty("--text", "rgb(2, 33, 63)")
+        themeIcon.innerHTML = `<i class="fa-solid fa-sun" aria-hidden="true"></i>`;
+        r.style.setProperty("--background", "rgb(255, 255, 255)");
+        r.style.setProperty("--screen", "rgb(220, 220, 220)");
+        r.style.setProperty("--card-front", "rgb(155, 248, 255)");
+        r.style.setProperty("--card-back", "rgb(157, 188, 191)");
+        r.style.setProperty("--text", "rgb(2, 33, 63)");
     }
-}
-// Show rules modal
-function showRules() {
-    rulesModal.classList.remove("hidden");
-}
-// Close rules modal
-function closeRules() {
-    rulesModal.classList.add("hidden");
 }
 // Show only home screen
 function showHomeScreen() {
@@ -129,10 +123,10 @@ function clearGame() {
     timer.innerHTML = elapsedTime;
     score.innerHTML = 0;
     endMessage.innerHTML = "";
-    extremeButton.classList.add("hidden");   
+    extremeButton.classList.add("hidden");
 }
 // Clear pair check memory
-function clearMemory(){
+function clearMemory() {
     cardsToCheckId = [];
     cardsToCheckValue = [];
 }
@@ -154,8 +148,8 @@ function createGame(chosenDifficulty) {
         gameCards.push(pair1, pair2);
     }
     // Fisher Yates shuffle method, learned through https://www.w3schools.com/js/js_array_sort.asp
-    for (let i = gameCards.length -1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i+1));
+    for (let i = gameCards.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
         let k = gameCards[i];
         gameCards[i] = gameCards[j];
         gameCards[j] = k;
@@ -230,7 +224,7 @@ function showCard(e) {
     cardsToCheckId.push(id);
     cardsToCheckValue.push(value);
 
-    if(cardsToCheckValue.length === 2) {
+    if (cardsToCheckValue.length === 2) {
         let unturned = document.querySelectorAll(".back");
         unturned.forEach((card) => removeCardEvents(card));
         setTimeout(checkCards, 300);
@@ -274,7 +268,7 @@ function endGame() {
         if (gameCards.length / 2 === difficultyPairs.extreme) {
             let extremeWin = document.createElement("p");
             extremeWin.innerHTML = `You beat the EXTREME bonus round!<br>
-            Can you do it again?`
+            Can you do it again?`;
             endMessage.appendChild(extremeWin);
         } else if (gameCards.length / 2 === difficultyPairs.hard) {
             checkBonus();
@@ -286,7 +280,7 @@ function endGame() {
         }
     } else {
         message.innerHTML = `You only found ${matchedPairs.length / 2} out of ${gameCards.length / 2} pairs<br>
-                            Better luck next time!`
+                            Better luck next time!`;
         endMessage.appendChild(message);
     }
 }
@@ -299,42 +293,53 @@ function checkBonus() {
         console.log("BONUS!");
         bonusMessage.innerHTML = `You unlocked the EXTREME bonus round!<br>
         Prepare yourself, you only get one chance.<br>
-        Good Luck!`
+        Good Luck!`;
         extremeButton.classList.remove("hidden");
     } else {
         console.log("NO BONUS!");
         bonusMessage.innerHTML = `Unlucky!<br>
         You scored ${currentTries + elapsedTime}.<br>
-        Try hard mode again for ${bonusScore} points or less to unlock the EXTREME bonus round!`
+        Try hard mode again for ${bonusScore} points or less to unlock the EXTREME bonus round!`;
     }
     endMessage.appendChild(bonusMessage);
 }
 // Sends email from contact form learned from https://www.emailjs.com/docs/tutorial/creating-contact-form/
-document.getElementById("contact-form").addEventListener("submit", function(e) {
+document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
     let submitButton = document.querySelector(".submit");
     submitButton.disabled = true;
+    modalBackground.classList.remove("hidden");
     emailjs.send("pa.woods", "snap", {
         "user_name": this.user_name.value,
         "user_email": this.user_email.value,
         "user_message": this.user_message.value
     })
-    .then(function() {
-        console.log("Success");
-        e.target.reset();
-        thankYouOpen();
-        submitButton.disabled = false;
-    },
-    function(error) {
-        console.log("Error", error);
-        submitButton.disabled = false;
-    });
-})
-
-function thankYouOpen() {
+        .then(function () {
+            console.log("Success");
+            e.target.reset();
+            showConfirmation();
+            submitButton.disabled = false;
+        },
+            function (error) {
+                console.log("Error", error);
+                submitButton.disabled = false;
+            });
+});
+// Show rules modal
+function showRules() {
+    modalBackground.classList.remove("hidden");
+    rulesModal.classList.remove("hidden");
+    confirmationModal.classList.add("hidden");
+}
+//  Show thank you modal
+function showConfirmation() {
+    modalBackground.classList.remove("hidden");
+    rulesModal.classList.add("hidden");
     confirmationModal.classList.remove("hidden");
 }
-
-function thankYouClose() {
+// Close rules modal
+function closeModal() {
+    modalBackground.classList.add("hidden");
+    rulesModal.classList.add("hidden");
     confirmationModal.classList.add("hidden");
 }

@@ -40,25 +40,6 @@
                 Find matching numbers within the 30 second time limit to win!
             </p>
             <button class="rules button">How to play</button>
-            <!-- Modal opens on button click -->
-            <div class="rules modal hidden">
-                <div class="rules modal-content">
-                    <div class="modal-header">
-                        <h2 class="title">How To Play</h2>
-                        <span class="rules close">X</span>
-                    </div>
-                    <ul class="rules">
-                        <li>Choose a difficulty to begin the 30 seconds timer.</li>
-                        <li>Select a card to uncover the number, select another card to try and match a pair.</li>
-                        <li>Matching pairs will remain uncovered, incorrrect pairs will be hidden again.</li>
-                        <li>Every attempt at a pair adds <b>1</b> to your score.</li>
-                        <li>Every second adds <b>1</b> to your score.</li>
-                        <li>The game ends when your time runs out or when all pairs are found.</li>
-                        <li>The lower the score, the better. 50 or less on Hard mode unlocks Extreme mode.</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End of Modal -->
             <p>Choose a difficulty level to begin.</p>
             <div class="difficulty-buttons">
                 <button id="easy" class="easy button">Easy</button>
@@ -105,25 +86,45 @@
                 </p>
                 <input type="text" name="user_name" class="input" placeholder="Name" required>
                 <input type="email" name="user_email" class="input" placeholder="Email" required>
-                <textarea name="user_message" id="message" class="input" placeholder="Type your message here..." required></textarea>
+                <textarea name="user_message" id="message" class="input" placeholder="Type your message here..."
+                    required></textarea>
                 <div class="form-buttons">
-                    <input type="submit" class="submit button" value="Send!">                    
+                    <input type="submit" class="submit button" value="Send!">
                     <button type="reset" class="reset button">Clear Form</button>
                 </div>
             </form>
             <!-- Confirmation modal opens on form submit -->
-            <div class="confirmation modal hidden">
-                <div class="confirmation modal-content">
-                    <div class="confirmation modal-header">
-                        <h2 class="title">Thank You!</h2>
-                        <span class="confirmation close">X</span>
-                    </div>
-                    <p>Your message has been sent, we will aim to get back to you in the following 48 hours.</p>
-                </div>
-            </div>
             <button class="home button">Home</button>
         </div>
     </main>
+    <!-- Modal opens on various button clicks -->
+    <div class="modal hidden">
+        <!-- Rules model content -->
+        <div class="rules modal-content hidden">
+            <div class="modal-header">
+                <h2 class="title">How To Play</h2>
+                <span class="rules close">X</span>
+            </div>
+            <ul class="rules">
+                <li>Choose a difficulty to begin the 30 seconds timer.</li>
+                <li>Select a card to uncover the number, select another card to try and match a pair.</li>
+                <li>Matching pairs will remain uncovered, incorrrect pairs will be hidden again.</li>
+                <li>Every attempt at a pair adds <b>1</b> to your score.</li>
+                <li>Every second adds <b>1</b> to your score.</li>
+                <li>The game ends when your time runs out or when all pairs are found.</li>
+                <li>The lower the score, the better. 50 or less on Hard mode unlocks Extreme mode.</li>
+            </ul>
+        </div>
+        <!-- Confirmation model content -->
+        <div class="confirmation modal-content hidden">
+            <div class="modal-header">
+                <h2 class="title">Thank You!</h2>
+                <span class="confirmation close">X</span>
+            </div>
+            <p>Your message has been sent, we will aim to get back to you in the following 48 hours.</p>
+        </div>
+    </div>
+    <!-- End of Modal -->
     <footer class="footer">
         <div class="social">
             <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
