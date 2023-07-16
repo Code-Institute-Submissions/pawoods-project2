@@ -330,21 +330,15 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 function showRules() {
     modalBackground.classList.remove("hidden");
     rulesModal.classList.remove("hidden");
-    // confirmationModal.classList.add("hidden");
-    // errorModal.classList.add("hidden");
 }
 //  Show thank you modal
 function showConfirmation() {
     modalBackground.classList.remove("hidden");
-    // rulesModal.classList.add("hidden");
     confirmationModal.classList.remove("hidden");
-    // errorModal.classList.add("hidden");
 }
 //  Show error modal
 function showError() {
     modalBackground.classList.remove("hidden");
-    // rulesModal.classList.add("hidden");
-    // confirmationModal.classList.add("hidden");
     errorModal.classList.remove("hidden");
 }
 // Close rules modal
