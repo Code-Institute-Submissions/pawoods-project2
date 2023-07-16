@@ -33,6 +33,8 @@ const endMessage = document.querySelector(".message-container");
 const modalBackground = document.querySelector(".modal");
 const rulesModal = document.querySelector(".rules.modal-content");
 const confirmationModal = document.querySelector(".confirmation.modal-content");
+const errorModal = document.querySelector(".error.modal-content");
+const errorMessage = document.querySelector(".error-message");
 
 // Buttons
 const themeButton = document.querySelector(".theme");
@@ -41,7 +43,6 @@ const homeButtons = document.querySelectorAll(".home");
 const contactButtons = document.querySelectorAll(".contact-button");
 const rulesButton = document.querySelector(".rules.button");
 const modalClose = document.querySelectorAll(".close");
-// const confirmationClose = document.querySelector(".confirmation.close");
 const difficultyButtons = document.querySelectorAll(".difficulty-buttons .button");
 const extremeButton = document.querySelector(".extreme");
 
@@ -52,14 +53,12 @@ const score = document.querySelector(".score");
 // Event Listeners
 themeButton.addEventListener("click", toggleTheme);
 rulesButton.addEventListener("click", showRules);
-// rulesClose.addEventListener("click", closeRules);
 homeButtons.forEach((button) => button.addEventListener("click", showHomeScreen));
 contactButtons.forEach((button) => button.addEventListener("click", showContactScreen));
 difficultyButtons.forEach((button) => button.addEventListener("click", function (e) {
     let difficulty = e.target.id;
     createGame(difficulty);
 }));
-// confirmationClose.addEventListener("click", thankYouClose);
 modalClose.forEach((button) => button.addEventListener("click", closeModal));
 
 // Functions
@@ -322,6 +321,8 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         },
             function (error) {
                 console.log("Error", error);
+                errorMessage = error;
+                showError();
                 submitButton.disabled = false;
             });
 });
@@ -329,17 +330,27 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 function showRules() {
     modalBackground.classList.remove("hidden");
     rulesModal.classList.remove("hidden");
-    confirmationModal.classList.add("hidden");
+    // confirmationModal.classList.add("hidden");
+    // errorModal.classList.add("hidden");
 }
 //  Show thank you modal
 function showConfirmation() {
     modalBackground.classList.remove("hidden");
-    rulesModal.classList.add("hidden");
+    // rulesModal.classList.add("hidden");
     confirmationModal.classList.remove("hidden");
+    // errorModal.classList.add("hidden");
+}
+//  Show error modal
+function showError() {
+    modalBackground.classList.remove("hidden");
+    // rulesModal.classList.add("hidden");
+    // confirmationModal.classList.add("hidden");
+    errorModal.classList.remove("hidden");
 }
 // Close rules modal
 function closeModal() {
     modalBackground.classList.add("hidden");
     rulesModal.classList.add("hidden");
     confirmationModal.classList.add("hidden");
+    errorModal.classList.add("hidden");
 }
