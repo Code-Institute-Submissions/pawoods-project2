@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // Global variables
 // Variable for game data
 let gameCards = [];
@@ -62,26 +63,24 @@ difficultyButtons.forEach((button) => button.addEventListener("click", function 
 modalClose.forEach((button) => button.addEventListener("click", closeModal));
 
 // Functions
-
+// Toggle between light and dark theme
 function toggleTheme() {
     if (themeIcon.classList.contains("light")) {
         themeIcon.classList.add("dark");
         themeIcon.classList.remove("light");
         themeIcon.innerHTML = `<i class="fa-solid fa-moon" aria-hidden="true"></i>`;
-        r.style.setProperty("--background", "rgb(2, 33, 63)");
-        r.style.setProperty("--screen", "rgb(2, 33, 63)");
-        r.style.setProperty("--card-front", "rgb(60, 120, 120)");
-        r.style.setProperty("--card-back", "rgb(15, 75, 95)");
-        r.style.setProperty("--text", "rgb(255, 255, 255)");
+        r.style.setProperty("--background", "#0f144d");
+        r.style.setProperty("--card-front", "#7c5b00");
+        r.style.setProperty("--card-back", "#2b486e");
+        r.style.setProperty("--text", "#ffffff");
     } else {
         themeIcon.classList.remove("dark");
         themeIcon.classList.add("light");
         themeIcon.innerHTML = `<i class="fa-solid fa-sun" aria-hidden="true"></i>`;
-        r.style.setProperty("--background", "rgb(255, 255, 255)");
-        r.style.setProperty("--screen", "rgb(220, 220, 220)");
-        r.style.setProperty("--card-front", "rgb(155, 248, 255)");
-        r.style.setProperty("--card-back", "rgb(157, 188, 191)");
-        r.style.setProperty("--text", "rgb(2, 33, 63)");
+        r.style.setProperty("--background", "#ffffff");
+        r.style.setProperty("--card-front", "#fcba04");
+        r.style.setProperty("--card-back", "#6a8ab5");
+        r.style.setProperty("--text", "#0f144d");
     }
 }
 // Show only home screen
@@ -321,7 +320,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         },
             function (error) {
                 console.log("Error", error);
-                errorMessage = error;
+                errorMessage.innerHTML = error;
                 showError();
                 submitButton.disabled = false;
             });

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital@0;1&family=Satisfy&display=swap');
 
 :root {
-    --background: rgb(255, 255, 255);
-    --screen: rgb(220, 220, 220);
-    --card-front: rgb(155, 248, 255);
-    --card-back: rgb(157, 188, 191);
-    --text: rgb(2, 33, 63);
-
+    --background: #ffffff;
+    --screen: rgba(0, 0, 0, 0.2);
+    --card-front: #FCBA04;
+    --card-back: #6a8ab5;
+    --text: #0f144d;
+    --highlight: #7c5b00;
 }
 
 body {
@@ -49,7 +49,7 @@ body * {
 .modal-content {
     width: 90%;
     padding: 10px 20px;
-    background-color: var(--screen);
+    background-color: var(--background);
     border-radius: 10px;
     border: 5px solid var(--text);
     color: var(--text);
@@ -84,6 +84,10 @@ body * {
     align-items: flex-end;
 }
 
+.theme:hover {
+    cursor: pointer;
+}
+
 .theme-icon {
     color: var(--text);
     width: 100%;
@@ -97,6 +101,15 @@ body * {
 
 .dark {
     justify-content: flex-start;
+}
+
+.title.home:hover,
+.contact-button:hover,
+.close:hover,
+.social:hover {
+    color: var(--highlight);
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .main {
@@ -135,23 +148,25 @@ body * {
     padding: 10px 10px;
     font-family: "Satisfy", cursive;
     font-size: 1.2em;
-    background-color: var(--text);
-    color: var(--background);
-    border: 2px solid var(--background);
+    background-color: var(--card-back);
+    color: var(--text);
+    border: 2px solid var(--text);
     border-radius: 1em;
 }
 
 .difficulty-buttons .button,
 .submit {
-    background-color: var(--card-back);
-    color: var(--text);
-    border-color: var(--text);
+    background-color: var(--text);
+    color: var(--background);
+    border-color: var(--background);
 }
 
 .button:hover {
     background-color: var(--card-front);
     color: var(--text);
     border-color: var(--text);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .button:disabled {
@@ -195,6 +210,7 @@ body * {
 
 .back:hover {
     box-shadow: 5px 5px 20px var(--text);
+    cursor: pointer;
 }
 
 .front {
