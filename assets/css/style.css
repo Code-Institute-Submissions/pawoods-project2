@@ -263,12 +263,15 @@ a:-webkit-any-link {
     display: none;
 }
 
-@media(min-width: 992px) {
+
+
+@media(orientation: landscape) {
 
     body {
         flex-direction: row;
         justify-content: center;
         justify-items: center;
+        height: 100vh;
     }
 
     .header,
@@ -279,5 +282,6 @@ a:-webkit-any-link {
 
     .main {
         width: 70vw;
+        height: 100vh;
     }
 }

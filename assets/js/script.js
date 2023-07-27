@@ -302,6 +302,9 @@ function checkBonus() {
     endMessage.appendChild(bonusMessage);
 }
 // Sends email from contact form learned from https://www.emailjs.com/docs/tutorial/creating-contact-form/
+(function () {
+    emailjs.init('X7_7dObeiya61iMMz');
+})();
 document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
     let submitButton = document.querySelector(".submit");
