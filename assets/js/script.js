@@ -192,14 +192,11 @@ function startTimer() {
     timerInterval = setInterval(addSeconds, 1000);
     function addSeconds() {
         if (matchedPairs.length === gameCards.length) {
-            console.log("WINNER!");
             clearInterval(timerInterval);
             endGame();
         } else if (gameScreen.classList.contains("hidden")) {
-            console.log("QUITTER!");
             clearInterval(timerInterval);
         } else if (elapsedTime === maxTime) {
-            console.log("LOSER!");
             clearInterval(timerInterval);
             endGame();
         } else {
@@ -288,13 +285,11 @@ function checkBonus() {
     bonusMessage.classList.add("bonus-message");
 
     if (currentTries + elapsedTime <= bonusScore) {
-        console.log("BONUS!");
         bonusMessage.innerHTML = `You unlocked the EXTREME bonus round!<br>
         Prepare yourself, you only get one chance.<br>
         Good Luck!`;
         extremeButton.classList.remove("hidden");
     } else {
-        console.log("NO BONUS!");
         bonusMessage.innerHTML = `Unlucky!<br>
         You scored ${currentTries + elapsedTime}.<br>
         Try hard mode again for ${bonusScore} points or less to unlock the EXTREME bonus round!`;
@@ -316,13 +311,11 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         "user_message": this.user_message.value
     })
         .then(function () {
-            console.log("Success");
             e.target.reset();
             showConfirmation();
             submitButton.disabled = false;
         },
             function (error) {
-                console.log("Error", error);
                 errorMessage.innerHTML = error;
                 showError();
                 submitButton.disabled = false;
