@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital@0;1&family=Satisfy&display=swap');
 
+/* Root variables */
 :root {
     --background: #ffffff;
     --screen: rgba(0, 0, 0, 0.2);
@@ -9,6 +10,7 @@
     --highlight: #7c5b00;
 }
 
+/* Body */
 body {
     margin: 0;
     padding: 0;
@@ -24,6 +26,7 @@ body * {
     margin: 0;
 }
 
+/* Page header and footer */
 .header,
 .footer {
     width: 100%;
@@ -34,6 +37,11 @@ body * {
     justify-content: space-evenly;
 }
 
+.title {
+    font-family: "Satisfy", cursive;
+}
+
+/* Modal styles */
 .modal {
     position: fixed;
     top: 0;
@@ -65,6 +73,8 @@ body * {
 
 .close {
     font-size: 20px;
+    background: none;
+    border: none;
 }
 
 .modal-content ul {
@@ -72,10 +82,7 @@ body * {
     text-align: left;
 }
 
-.title {
-    font-family: "Satisfy", cursive;
-}
-
+/* Theme styles */
 .theme {
     display: flex;
     width: 45px;
@@ -105,6 +112,7 @@ body * {
     justify-content: flex-start;
 }
 
+/* Buttons and links */
 .title.home:hover,
 .contact-button:hover,
 .close:hover,
@@ -112,36 +120,6 @@ body * {
     color: var(--highlight);
     cursor: pointer;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-a:visited {
-    color: var(--text);
-}
-
-.main {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.screen {
-    border: 5px solid var(--text);
-    border-radius: 10px;
-    background-color: var(--screen);
-    width: 90%;
-    height: 90%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-}
-
-.start p {
-    font-size: 1rem;
 }
 
 .difficulty-buttons {
@@ -179,6 +157,47 @@ a:visited {
     cursor: not-allowed;
 }
 
+.social,
+.contact-button {
+    font-size: 32px;
+}
+
+a:visited {
+    color: var(--text);
+}
+
+a:-webkit-any-link {
+    color: var(--text);
+}
+
+/* Main container and start screen */
+.main {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen {
+    border: 5px solid var(--text);
+    border-radius: 10px;
+    background-color: var(--screen);
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.start p {
+    font-size: 1rem;
+}
+
+/* Game screen */
 .game-header {
     display: flex;
     flex-direction: row;
@@ -223,6 +242,7 @@ a:visited {
     background-color: var(--card-front);
 }
 
+/* End screen */
 .message-container {
     display: flex;
     flex-direction: column;
@@ -235,6 +255,7 @@ a:visited {
     font-size: 2em;
 }
 
+/* Contact screen */
 form .input {
     color: var(--text);
     background-color: var(--background);
@@ -250,21 +271,11 @@ textarea {
     resize: none;
 }
 
-.social,
-.contact-button {
-    font-size: 32px;
-}
-
-a:-webkit-any-link {
-    color: var(--text);
-}
-
 .hidden {
     display: none;
 }
 
-
-
+/* Media queries */
 @media(orientation: landscape) {
 
     body {

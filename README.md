@@ -1,4 +1,4 @@
-# Title
+# SNAP!
 
 ---
 ## Table of contents
