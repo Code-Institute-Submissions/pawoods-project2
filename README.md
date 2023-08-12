@@ -4,7 +4,7 @@ SNAP! is a game where cards are displayed face down on a game board, players mus
 
 Incorporating multiple difficulties, SNAP! appeals to players of all ages and skill levels, from those looking for a quick and fun game to pass the time to those looking for a more challenging experience with the inclusion of an unlockable EXTREME bonus round.
 
-As well as being a fun or challenging player experience, SNAP! also tests mental agility, requiring quick reactions and accurate memory whilst playing against the clock.
+As well as being a fun and challenging player experience, SNAP! also tests mental agility, requiring quick reactions and accurate memory whilst playing against the clock.
 
 <!-- INSERT AM I RESPONSIVE IMAGE -->
 
@@ -48,9 +48,13 @@ As well as being a fun or challenging player experience, SNAP! also tests mental
 
 ### Wireframes
 
+Prior to beginning coding, I used Balsamiq to create wireframes, planning out both the functional components and visual design that I wanted to incorporate into the site on various device types.
+
 #### Functional Components
 
 #### Visual Design
+
+For visual design wireframes on all device sizes, please see [WIREFRAMES.md](WIREFRAMES.md).
 
 ### Themes
 
@@ -70,7 +74,13 @@ As well as being a fun or challenging player experience, SNAP! also tests mental
 
 ### Manual Testing
 
+### Code Testing
+
+For all code testing, please see [TESTING.md](TESTING.md).
+
 ### Bugs
+
+During the coding process, I made sure to test each new addition to the functionailty through Chrome Dev Tools. I made a note of any bugs found and the measures implemented to fix them below.
 
 #### Fixed Bugs
 
@@ -88,7 +98,7 @@ As well as being a fun or challenging player experience, SNAP! also tests mental
 
 4. Bug found when `renderCards` function was called, it would add a new set of cards to the inner HTML of the cards board, not relacing the previous set.
 
-   - Fixed by adding a clearing line of code within `clearGame` function to set innerHTML to "".
+   - Fixed by adding a clearing line of code within `clearGame` function to set innerHTML to and empty string.
 
 5. Bug found where current tries count wasn't reset when a new game was restarted.
 
@@ -99,6 +109,8 @@ As well as being a fun or challenging player experience, SNAP! also tests mental
    - Fixed by declaring the `timeInterval` variable globally and clearing the interval before setting it within the `startTimer` function.
 
 #### Unfixed Bugs
+
+There are no unfixed bugs that I am aware of.
 
 ---
 
@@ -118,7 +130,7 @@ Link to live site - https://pawoods.github.io/project2/
 
 ### Local Deployment
 
-To access this [GitHub Repository](https://github.com/pawoods/project2) locally, you can follow the below guides to either clone or fork to repo.
+To access this [GitHub Repository](https://github.com/pawoods/project2) locally, you can follow the below guides to either clone or fork the repo.
 
 #### Cloning
 
