@@ -71,13 +71,6 @@ body * {
     justify-content: space-between;
 }
 
-.close {
-    color: var(--text);
-    font-size: 20px;
-    background: none;
-    border: none;
-}
-
 .modal-content ul {
     padding-inline-start: 20px;
     text-align: left;
@@ -114,13 +107,11 @@ body * {
 }
 
 /* Buttons and links */
-.title.home:hover,
-.contact-button:hover,
-.close:hover,
-.social:hover {
-    color: var(--highlight);
-    cursor: pointer;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+.close {
+    color: var(--text);
+    font-size: 20px;
+    background: none;
+    border: none;
 }
 
 .difficulty-buttons {
@@ -146,6 +137,20 @@ body * {
     border-color: var(--background);
 }
 
+.social,
+.contact-button {
+    font-size: 32px;
+}
+
+.title.home:hover,
+.contact-button:hover,
+.close:hover,
+.social:hover {
+    color: var(--highlight);
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 .button:hover {
     background-color: var(--card-front);
     color: var(--text);
@@ -156,11 +161,6 @@ body * {
 
 .button:disabled {
     cursor: not-allowed;
-}
-
-.social,
-.contact-button {
-    font-size: 32px;
 }
 
 a:visited {

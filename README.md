@@ -19,8 +19,8 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
     - [Current Features](#current-features)
     - [Future Features](#future-features)
   - [Wireframes](#wireframes)
-    - [Functional Components](#functional-components)
     - [Visual Design](#visual-design)
+    - [Functional Components](#functional-components)
   - [Themes](#themes)
     - [Colours](#colours)
     - [Icons](#icons)
@@ -40,7 +40,27 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
 
 ## UX
 
+As this project is very heavily reliant upon user interactions, the first consideration during the planning phase was how the site would both look and perform from a user perspective. I created the below user stories as a guide on what each would expect to find from the site in order to create a good overall user experience.
+
 ### User Stories
+
+1. First time user would expect:
+
+   - To have a clear guide on how to play the game.
+   - To have consistent ability to easily navigate around the site.
+   - To have feedback on how they are scoring during and after the game.
+   - To find a responsive game that is easily playable on all devices.
+
+2. Returning user would expect:
+
+   - To be able to face a more challenging gaming experience.
+   - To be shown their score with the aim of improving.
+   - To have a goal to aim towards to keep them returning to the game.
+   - To be able to provide feedback to the game creators.
+
+3. Site administrator would expect:
+   - To be able to receive feedback from casual and regular players alike.
+   - To be able to easily update perameters
 
 #### Current Features
 
@@ -50,11 +70,15 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
 
 Prior to beginning coding, I used Balsamiq to create wireframes, planning out both the functional components and visual design that I wanted to incorporate into the site on various device types.
 
-#### Functional Components
-
 #### Visual Design
 
 For visual design wireframes on all device sizes, please see [WIREFRAMES.md](WIREFRAMES.md).
+
+#### Functional Components
+
+Alongside the wireframes for the visual design, I decided to create a wireframe mockup of how each screen within the site would link with eachother, including the planned end of game scenarios that could result from playing the game through to completion. This served as an initial guide on setting up the basic HTML, CSS, and JS structure of the project.
+
+![Functionality flow](/assets/images/readmeImages/functionalityFlow.png)
 
 ### Themes
 
