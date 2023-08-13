@@ -2,6 +2,8 @@
 
 SNAP! is a game where cards are displayed face down on a game board, players must look to uncover all pairs as quickly and in as little moves as possible.
 
+The name SNAP! was chosen as both a nod towards the classic playing card pair matching game and also as a short sharp title to nicely reflect the quick nature of the game.
+
 Incorporating multiple difficulties, SNAP! appeals to players of all ages and skill levels, from those looking for a quick and fun game to pass the time to those looking for a more challenging experience with the inclusion of an unlockable EXTREME bonus round.
 
 As well as being a fun and challenging player experience, SNAP! also tests mental agility, requiring quick reactions and accurate memory whilst playing against the clock.
@@ -23,8 +25,8 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
     - [Functional Components](#functional-components)
   - [Themes](#themes)
     - [Colours](#colours)
-    - [Icons](#icons)
     - [Fonts](#fonts)
+    - [Icons](#icons)
 - [Development](#development)
   - [Languages](#languages)
 - [Testing](#testing)
@@ -75,7 +77,7 @@ As this project is very heavily reliant upon user interactions, the first consid
 
 ### Wireframes
 
-Prior to beginning coding, I used Balsamiq to create wireframes, planning out both the functional components and visual design that I wanted to incorporate into the site on various device types.
+Prior to beginning coding, I used [Balsamiq](https://balsamiq.com/) to create wireframes, planning out both the functional components and visual design that I wanted to incorporate into the site on various device types.
 
 #### Visual Design
 
@@ -97,13 +99,25 @@ This was the colour pallete I settled on, generated using [coolors.co](https://c
 
 ![Coolors Colour Pallette](/assets/images/readmeImages/coolors.png)
 
+#### Fonts
+
+With the title SNAP! in mind, this stylised title was input into [Google Fonts](https://fonts.google.com) to search for a font to use for the site titles, card backs and numbers. I settled on "Satisfy" as it brought a nice, cursive style to the site whilst also remaining fully readable. This was important to make the numbers as easy to read to maintain a positive user experience.
+
+![Satisfy Font](/assets/images/readmeImages/satisfy.png)
+
+For the remaining site text, I chose "Pathway Extreme" as it has a fairly spaced out, rounded style which nicely compliments the title font whilst also being easy to read in larger blocks of text.
+
+![Pathway Extreme Font](/assets/images/readmeImages/pathwayExtreme.png)
+
 #### Icons
 
 Icons are used throughout the site using [Font Awesome](https://fontawesome.com/). These were especially useful when implementing the light/dark mode toggle as I could hide or show the sun/moon depending on the currently selected theme.
 
 ![Site Icons](/assets/images/readmeImages/icons.png)
 
-#### Fonts
+A favicon is also included which matches the question mark used on the unturned cards within the game to keep the continuity of the site font and colours. This was created using [favicon.io](https://favicon.io/favicon-generator/).
+
+![Site Favicon](/assets/images/favicon/android-chrome-192x192.png)
 
 ---
 
@@ -121,28 +135,28 @@ Icons are used throughout the site using [Font Awesome](https://fontawesome.com/
 
 1. First Time User
 
-|                                Test                                 | Feature | Status |
-| :-----------------------------------------------------------------: | :-----: | :----: |
-|           To have a clear guide on how to play the game.            |         |        |
-|   To have consistent ability to easily navigate around the site.    |         |        |
+| Test                                                                | Feature | Status |
+| :------------------------------------------------------------------ | :-----: | :----: |
+| To have a clear guide on how to play the game.                      |         |        |
+| To have consistent ability to easily navigate around the site.      |         |        |
 | To have feedback on how they are scoring during and after the game. |         |        |
-|  To find a responsive game that is easily playable on all devices.  |         |        |
+| To find a responsive game that is easily playable on all devices.   |         |        |
 
 2. Returning User
 
-|                               Test                                | Feature | Status |
-| :---------------------------------------------------------------: | :-----: | :----: |
-|     To be able to face a more challenging gaming experience.      |         |        |
-|        To be shown their score with the aim of improving.         |         |        |
+| Test                                                              | Feature | Status |
+| :---------------------------------------------------------------- | :-----: | :----: |
+| To be able to face a more challenging gaming experience.          |         |        |
+| To be shown their score with the aim of improving.                |         |        |
 | To have a goal to aim towards to keep them returning to the game. |         |        |
-|       To be able to provide feedback to the game creators.        |         |        |
+| To be able to provide feedback to the game creators.              |         |        |
 
 3. Site Admin
 
-|                                 Test                                  | Feature | Status |
-| :-------------------------------------------------------------------: | :-----: | :----: |
+| Test                                                                  | Feature | Status |
+| :-------------------------------------------------------------------- | :-----: | :----: |
 | To be able to receive feedback from casual and regular players alike. |         |        |
-|                To be able to easily update perameters.                |         |        |
+| To be able to easily update perameters.                               |         |        |
 
 ### Code Testing
 
@@ -228,3 +242,11 @@ Forking this repository will create a parallel version in your own GitHub accoun
 ---
 
 ## Credits
+
+| Source                                           | Use                                                                               |
+| :----------------------------------------------- | :-------------------------------------------------------------------------------- |
+| [Balsamiq](https://balsamiq.com/)                | Visual design and funtional component flow wireframes.                            |
+| [Coolors](https://coolors.co/)                   | Creation of colour palette.                                                       |
+| [Google Fonts](https://fonts.google.com/)        | "Satisfy" and "Pathway Extreme" fonts across entire site.                         |
+| [Font Awesome](https://fontawesome.com/)         | Icons across entire site. "sr-only" class for use of screen reader only elements. |
+| [Favicon](https://favicon.io/favicon-generator/) | Creation of stylised favicon.                                                     |
