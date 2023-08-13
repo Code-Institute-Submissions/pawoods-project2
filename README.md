@@ -18,8 +18,6 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
 
 - [UX](#ux)
   - [User Stories](#user-stories)
-    - [Current Features](#current-features)
-    - [Future Features](#future-features)
   - [Wireframes](#wireframes)
     - [Visual Design](#visual-design)
     - [Functional Components](#functional-components)
@@ -27,6 +25,9 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
     - [Colours](#colours)
     - [Fonts](#fonts)
     - [Icons](#icons)
+  - [Features](#features)
+    - [Current Features](#current-features)
+    - [Future Features](#future-features)
 - [Development](#development)
   - [Languages](#languages)
 - [Testing](#testing)
@@ -66,28 +67,6 @@ As this project is very heavily reliant upon user interactions, the first consid
 3. Site administrator would expect:
    - To be able to receive feedback from casual and regular players alike.
    - To be able to easily update perameters.
-
-#### Current Features
-
-- Header and Footer
-
-- Start Screen
-
-- Game Screen
-
-- End Screen
-
-- Contact Screen
-
-#### Future Features
-
-Below are the features that I would like to add to this project in the future
-
-1. A leaderboard, keeping high scores for each difficulty to give players a goal to aim for when playing.
-
-2. A continuous play mode where completion of each level triggers the next level to begin with further card pairs added.
-
-3. A free play mode that removes the time limit to give a more casual and relaxing gaming experience.
 
 ### Wireframes
 
@@ -132,6 +111,35 @@ Icons are used throughout the site using [Font Awesome](https://fontawesome.com/
 A favicon is also included which matches the question mark used on the unturned cards within the game to keep the continuity of the site font and colours. This was created using [favicon.io](https://favicon.io/favicon-generator/).
 
 ![Site Favicon](/assets/images/favicon/android-chrome-192x192.png)
+
+### Features
+
+The site is made up of just one page with a consistent header and footer visible throughout the various screens. Each screen is shown or hidden depending on user interactions with buttons, or game ending scenarios. I decided to complete the project in this way to challenge my ability to manipulate the DOM with JS but also to make the experience as reactive as possible for users as a SPA (Single Page Application) eliminates loading times between pages.
+
+#### Current Features
+
+| Location          | Features                                                                                                                                                                                                                                                                                                                                                                                                                       | Screenshot                                                                                                              |
+| :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| Header & Footer   | 1. Stylised title logo that serves as a consistent home button across the site.<br>2. Light/dark theme toggle button.<br>3.Envelope logo which brings up the contact form page.<br>- Dark header showing dark icon moon logo.                                                                                                                                                                                                  | ![Header](/assets/images/readmeImages/headerFeatures.png)<br>![Dark Header](/assets/images/readmeImages/headerDark.png) |
+| Footer            | 1. Social media links which each open in a new tab.                                                                                                                                                                                                                                                                                                                                                                            | ![Footer](/assets/images/readmeImages/footerFeatures.png)                                                               |
+| Start Screen      | 1. Welcome title and brief description of the game.<br>2. "How to play" button which opens up a modal showing all game rules.<br>3. Difficulty selection section with distinct buttons for each of the regularly accessible difficulties.                                                                                                                                                                                      | ![Start Screen](/assets/images/readmeImages/startScreenFeatures.png)                                                    |
+| How To Play Modal | 1. Title matching the clicked button text and bullet point list of game rules.<br>2. "X" close button to remove modal and return to screen underneath.                                                                                                                                                                                                                                                                         | ![How To Play Modal](/assets/images/readmeImages/howToPlayFeatures.png)                                                 |
+| Game Screen       | 1. Timer with incrementing count in seconds counting towards the 30 seconds game time limit.<br>2. Score with incrementing count which adds 1 for each second and 1 for each attempt at making a pair.<br>3. Distinguishable game cards with the recognisable theme "?" and a box shadow present when hovered over.                                                                                                            | ![Game Screen](/assets/images/readmeImages/gameScreenFeatures.png)                                                      |
+| End Screen        | 1. Win or lose message, depending on whether all pairs were found.<br>2. Personalised final score count.<br>3. Further encouragement/information message, depending on difficulty and win/lose/final score.<br>4. Extreme bonus round start button, only unlocked by completing hard mode with a score of 50 or less.<br>5. Home button to encourage continuation of the experience and be taken back to chosing a difficulty. | ![End Screen](/assets/images/readmeImages/gameEndFeatures.png)                                                          |
+| Contact Screen    | 1. Message encouraging user interaction and simple, clear contact form requesting name, email, and feedback message.<br>2. Buttons to either submit or clear form. Submit button is differently coloured to further encourage user interaction.<br>3. Home button to once again, return the user to the start of the game once the form is submitted.                                                                          | ![Contact Screen](/assets/images/readmeImages/contactScreenFeatures.png)                                                |
+| Submission Modal  | 1. Title matching the site theme text and message either confirming submission or letting user know of an error.<br>2. "X" close button to remove modal and return to screen underneath.                                                                                                                                                                                                                                       | ![Submission Modal](/assets/images/readmeImages/submissionFeatures.png)                                                 |
+
+#### Future Features
+
+Below are the features that I would like to add to this project in the future
+
+1. A leaderboard, keeping high scores for each difficulty to give players a goal to aim for when playing.
+
+2. A continuous play mode where completion of each level triggers the next level to begin with further card pairs added.
+
+3. A free play mode that removes the time limit to give a more casual and relaxing gaming experience.
+
+4. An automatic redirect within the form submission modal to take users directly back to the start screen.
 
 ---
 
