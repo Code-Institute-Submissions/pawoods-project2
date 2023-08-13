@@ -69,11 +69,25 @@ As this project is very heavily reliant upon user interactions, the first consid
 
 #### Current Features
 
-<!-- INSERT FEATURES -->
+- Header and Footer
+
+- Start Screen
+
+- Game Screen
+
+- End Screen
+
+- Contact Screen
 
 #### Future Features
 
-<!-- INSERT FUTURE FEATURES -->
+Below are the features that I would like to add to this project in the future
+
+1. A leaderboard, keeping high scores for each difficulty to give players a goal to aim for when playing.
+
+2. A continuous play mode where completion of each level triggers the next level to begin with further card pairs added.
+
+3. A free play mode that removes the time limit to give a more casual and relaxing gaming experience.
 
 ### Wireframes
 
