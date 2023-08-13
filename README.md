@@ -24,10 +24,13 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
   - [Themes](#themes)
     - [Colours](#colours)
     - [Icons](#icons)
+    - [Fonts](#fonts)
 - [Development](#development)
   - [Languages](#languages)
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
+  - [User Stories Testing](#user-stories-testing)
+  - [Code Testing](#code-testing)
   - [Bugs](#bugs)
     - [Fixed Bugs](#fixed-bugs)
     - [Unfixed Bugs](#unfixed-bugs)
@@ -60,11 +63,15 @@ As this project is very heavily reliant upon user interactions, the first consid
 
 3. Site administrator would expect:
    - To be able to receive feedback from casual and regular players alike.
-   - To be able to easily update perameters
+   - To be able to easily update perameters.
 
 #### Current Features
 
+<!-- INSERT FEATURES -->
+
 #### Future Features
+
+<!-- INSERT FUTURE FEATURES -->
 
 ### Wireframes
 
@@ -82,9 +89,21 @@ Alongside the wireframes for the visual design, I decided to create a wireframe 
 
 ### Themes
 
+As one of the features was to be a light/dark mode theme toggle button, I wanted to use a colour pallette that was both complimentary and also added enough contrast to be able to be inverted in the dark mode while retaining the overall look of the site and the necessary contrast for ease of visibility.
+
 #### Colours
 
+This was the colour pallete I settled on, generated using [coolors.co](https://coolors.co/). This enabled me to begin with a light mode, using a white background, dark blue text and outlining and a bright contrast yellow for highlighting and then inverting these colours to create a dark mode so as not to strain the eyes while playing in the dark.
+
+![Coolors Colour Pallette](/assets/images/readmeImages/coolors.png)
+
 #### Icons
+
+Icons are used throughout the site using [Font Awesome](https://fontawesome.com/). These were especially useful when implementing the light/dark mode toggle as I could hide or show the sun/moon depending on the currently selected theme.
+
+![Site Icons](/assets/images/readmeImages/icons.png)
+
+#### Fonts
 
 ---
 
@@ -97,6 +116,33 @@ Alongside the wireframes for the visual design, I decided to create a wireframe 
 ## Testing
 
 ### Manual Testing
+
+### User Stories Testing
+
+1. First Time User
+
+|                                Test                                 | Feature | Status |
+| :-----------------------------------------------------------------: | :-----: | :----: |
+|           To have a clear guide on how to play the game.            |         |        |
+|   To have consistent ability to easily navigate around the site.    |         |        |
+| To have feedback on how they are scoring during and after the game. |         |        |
+|  To find a responsive game that is easily playable on all devices.  |         |        |
+
+2. Returning User
+
+|                               Test                                | Feature | Status |
+| :---------------------------------------------------------------: | :-----: | :----: |
+|     To be able to face a more challenging gaming experience.      |         |        |
+|        To be shown their score with the aim of improving.         |         |        |
+| To have a goal to aim towards to keep them returning to the game. |         |        |
+|       To be able to provide feedback to the game creators.        |         |        |
+
+3. Site Admin
+
+|                                 Test                                  | Feature | Status |
+| :-------------------------------------------------------------------: | :-----: | :----: |
+| To be able to receive feedback from casual and regular players alike. |         |        |
+|                To be able to easily update perameters.                |         |        |
 
 ### Code Testing
 
@@ -120,7 +166,7 @@ During the coding process, I made sure to test each new addition to the function
 
    - Fixed by identifying that the id had been set twice on the first card of each pair instead of an id and a value. `pair1.id` changed to `pair1.value`.
 
-4. Bug found when `renderCards` function was called, it would add a new set of cards to the inner HTML of the cards board, not relacing the previous set.
+4. Bug found when `renderCards` function was called, it would add a new set of cards to the inner HTML of the cards board, not replacing the previous set.
 
    - Fixed by adding a clearing line of code within `clearGame` function to set innerHTML to and empty string.
 
