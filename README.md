@@ -25,11 +25,10 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
     - [Colours](#colours)
     - [Fonts](#fonts)
     - [Icons](#icons)
-  - [Features](#features)
-    - [Current Features](#current-features)
-    - [Future Features](#future-features)
-- [Development](#development)
-  - [Languages](#languages)
+- [Features](#features)
+  - [Current Features](#current-features)
+  - [Future Features](#future-features)
+- [Languages and Technologies](#languages-and-technologies)
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
   - [User Stories Testing](#user-stories-testing)
@@ -66,7 +65,7 @@ As this project is very heavily reliant upon user interactions, the first consid
 
 3. Site administrator would expect:
    - To be able to receive feedback from casual and regular players alike.
-   - To be able to easily update perameters.
+   - To be able to easily update perameters within the game, such as card amounts in each difficulty or game time limit.
 
 ### Wireframes
 
@@ -112,26 +111,26 @@ A favicon is also included which matches the question mark used on the unturned 
 
 ![Site Favicon](/assets/images/favicon/android-chrome-192x192.png)
 
-### Features
+## Features
 
 The site is made up of just one page with a consistent header and footer visible throughout the various screens. Each screen is shown or hidden depending on user interactions with buttons, or game ending scenarios. I decided to complete the project in this way to challenge my ability to manipulate the DOM with JS but also to make the experience as reactive as possible for users as a SPA (Single Page Application) eliminates loading times between pages.
 
-#### Current Features
+### Current Features
 
 | Location          | Features                                                                                                                                                                                                                                                                                                                                                                                                                       | Screenshot                                                                                                              |
 | :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| Header & Footer   | 1. Stylised title logo that serves as a consistent home button across the site.<br>2. Light/dark theme toggle button.<br>3.Envelope logo which brings up the contact form page.<br>- Dark header showing dark icon moon logo.                                                                                                                                                                                                  | ![Header](/assets/images/readmeImages/headerFeatures.png)<br>![Dark Header](/assets/images/readmeImages/headerDark.png) |
-| Footer            | 1. Social media links which each open in a new tab.                                                                                                                                                                                                                                                                                                                                                                            | ![Footer](/assets/images/readmeImages/footerFeatures.png)                                                               |
+| Header            | 1. Stylised title logo that serves as a consistent home button across the site.<br>2. Light/dark theme toggle button.<br>3.Envelope logo which brings up the contact form page.<br>- This appears to the left side of the main game screen on any landscape orientation device/screen.<br>- Dark header showing dark icon moon logo.                                                                                           | ![Header](/assets/images/readmeImages/headerFeatures.png)<br>![Dark Header](/assets/images/readmeImages/headerDark.png) |
+| Footer            | 1. Social media links which each open in a new tab.<br>- This appears to the right side of the main game screen on any landscape orientation device/screen.                                                                                                                                                                                                                                                                    | ![Footer](/assets/images/readmeImages/footerFeatures.png)                                                               |
 | Start Screen      | 1. Welcome title and brief description of the game.<br>2. "How to play" button which opens up a modal showing all game rules.<br>3. Difficulty selection section with distinct buttons for each of the regularly accessible difficulties.                                                                                                                                                                                      | ![Start Screen](/assets/images/readmeImages/startScreenFeatures.png)                                                    |
 | How To Play Modal | 1. Title matching the clicked button text and bullet point list of game rules.<br>2. "X" close button to remove modal and return to screen underneath.                                                                                                                                                                                                                                                                         | ![How To Play Modal](/assets/images/readmeImages/howToPlayFeatures.png)                                                 |
 | Game Screen       | 1. Timer with incrementing count in seconds counting towards the 30 seconds game time limit.<br>2. Score with incrementing count which adds 1 for each second and 1 for each attempt at making a pair.<br>3. Distinguishable game cards with the recognisable theme "?" and a box shadow present when hovered over.                                                                                                            | ![Game Screen](/assets/images/readmeImages/gameScreenFeatures.png)                                                      |
 | End Screen        | 1. Win or lose message, depending on whether all pairs were found.<br>2. Personalised final score count.<br>3. Further encouragement/information message, depending on difficulty and win/lose/final score.<br>4. Extreme bonus round start button, only unlocked by completing hard mode with a score of 50 or less.<br>5. Home button to encourage continuation of the experience and be taken back to chosing a difficulty. | ![End Screen](/assets/images/readmeImages/gameEndFeatures.png)                                                          |
-| Contact Screen    | 1. Message encouraging user interaction and simple, clear contact form requesting name, email, and feedback message.<br>2. Buttons to either submit or clear form. Submit button is differently coloured to further encourage user interaction.<br>3. Home button to once again, return the user to the start of the game once the form is submitted.                                                                          | ![Contact Screen](/assets/images/readmeImages/contactScreenFeatures.png)                                                |
+| Contact Screen    | 1. Message encouraging user interaction and simple, clear contact form requesting name, email, and feedback message.<br>2. Buttons to either submit or clear form. Submit button is differently coloured to further encourage user interaction. Automatic email is sent through EmailJS on submission.<br>3. Home button to once again, return the user to the start of the game once the form is submitted.                   | ![Contact Screen](/assets/images/readmeImages/contactScreenFeatures.png)                                                |
 | Submission Modal  | 1. Title matching the site theme text and message either confirming submission or letting user know of an error.<br>2. "X" close button to remove modal and return to screen underneath.                                                                                                                                                                                                                                       | ![Submission Modal](/assets/images/readmeImages/submissionFeatures.png)                                                 |
 
-#### Future Features
+### Future Features
 
-Below are the features that I would like to add to this project in the future
+Below are the features that I would like to add to this project in the future:
 
 1. A leaderboard, keeping high scores for each difficulty to give players a goal to aim for when playing.
 
@@ -143,15 +142,29 @@ Below are the features that I would like to add to this project in the future
 
 ---
 
-## Development
+## Languages and Technologies
 
-### Languages
+| Name                                                                  | Use                                                                               |
+| :-------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)             | Structure of site content.                                                        |
+| [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)               | Layout and styling of site content.                                               |
+| [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | Used to make elements reactive to user interactions.                              |
+| [GitHub](https://github.com/)                                         | Houses project repository.                                                        |
+| [CodeAnywehere](https://dashboard.codeanywhere.com/)                  | IDE for development of project.                                                   |
+| [Balsamiq](https://balsamiq.com/)                                     | Visual design and funtional component flow wireframes.                            |
+| [Coolors](https://coolors.co/)                                        | Creation of colour palette.                                                       |
+| [Google Fonts](https://fonts.google.com/)                             | "Satisfy" and "Pathway Extreme" fonts across entire site.                         |
+| [Font Awesome](https://fontawesome.com/)                              | Icons across entire site. "sr-only" class for use of screen reader only elements. |
+| [Favicon](https://favicon.io/favicon-generator/)                      | Creation of stylised favicon.                                                     |
+| [EmailJS](https://www.emailjs.com/)                                   | Sends automatic email on submission of contact form.                              |
 
 ---
 
 ## Testing
 
 ### Manual Testing
+
+Once I had a fucntioning game from start to finish with basic styling and structure in place, I send it out to friends and family to gather feedback. All feedback was positive and the game worked as expected and presented a challenge that kept people interested in playing.
 
 ### User Stories Testing
 
@@ -175,10 +188,10 @@ Below are the features that I would like to add to this project in the future
 
 3. Site Admin
 
-| Test                                                                  | Feature | Status |
-| :-------------------------------------------------------------------- | :-----: | :----: |
-| To be able to receive feedback from casual and regular players alike. |         |        |
-| To be able to easily update perameters.                               |         |        |
+| Test                                                                                            | Feature | Status |
+| :---------------------------------------------------------------------------------------------- | :-----: | :----: |
+| To be able to receive feedback from casual and regular players alike.                           |         |        |
+| To be able to easily update perameters; pairs of cards in each difficulty, game time limit etc. |         |        |
 
 ### Code Testing
 
@@ -265,10 +278,9 @@ Forking this repository will create a parallel version in your own GitHub accoun
 
 ## Credits
 
-| Source                                           | Use                                                                               |
-| :----------------------------------------------- | :-------------------------------------------------------------------------------- |
-| [Balsamiq](https://balsamiq.com/)                | Visual design and funtional component flow wireframes.                            |
-| [Coolors](https://coolors.co/)                   | Creation of colour palette.                                                       |
-| [Google Fonts](https://fonts.google.com/)        | "Satisfy" and "Pathway Extreme" fonts across entire site.                         |
-| [Font Awesome](https://fontawesome.com/)         | Icons across entire site. "sr-only" class for use of screen reader only elements. |
-| [Favicon](https://favicon.io/favicon-generator/) | Creation of stylised favicon.                                                     |
+- [W3Schools](https://www.w3schools.com/js/js_array_sort.asp) - Article on Fisher Yates shefflu method for rnadomising cards once created.
+- [W3Schools](https://www.w3schools.com/js/js_timing.asp) - Article on adding timer function in JavaScript used to add time limit to game.
+- [W3Schools](https://www.w3schools.com/css/css3_variables.asp) - Adding root variables to CSS to allow easier changes within JavaScript when changing the dark/light theme.
+- [EmailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form/) - Tutorial on adding function to send automatic email on submission of contact form.
+- A big thank you to my Code Institute cohort who have been very encouraging throughout this project.
+- A special thank you to my Code Institute cohort facilitator Iris Smok and Mentor Martina Tel for their help with some difficulties surrounding this project and JavaScript in general.
