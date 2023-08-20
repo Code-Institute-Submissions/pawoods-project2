@@ -194,10 +194,6 @@ a:-webkit-any-link {
     text-align: center;
 }
 
-.start p {
-    font-size: 1rem;
-}
-
 /* Game screen */
 .game-header {
     display: flex;
@@ -295,5 +291,63 @@ textarea {
     .main {
         width: 70vw;
         height: 100vh;
+    }
+}
+
+@media(max-height: 400px) {
+
+    .header {
+        position: fixed;
+        left: 0;
+        height: 100vh;
+    }
+
+    .footer {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+    }
+
+    .main {
+        align-items: flex-start;
+        padding-top: 5vh;
+    }
+
+    .start.screen,
+    .contact.screen,
+    .end.screen {
+        height: fit-content;
+    }
+
+    .rules li {
+        font-size: 15px;
+    }
+
+    .button {
+        margin: 5px;
+    }
+}
+
+@media(min-width: 768px) {
+
+    p,
+    li {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2,
+    .button {
+        font-size: 30px;
+    }
+}
+
+@media(min-width: 992px) {
+    .main .screen {
+        width: 70%;
+        height: 70%;
     }
 }
