@@ -89,7 +89,7 @@ function showHomeScreen() {
     gameScreen.classList.add("hidden");
     endScreen.classList.add("hidden");
     contactScreen.classList.add("hidden");
-    window.scrollTo({ top: 0 });
+    window.scrollTo(0, 0);
 }
 // Show only game screen
 function showGameScreen() {
@@ -97,7 +97,7 @@ function showGameScreen() {
     gameScreen.classList.remove("hidden");
     endScreen.classList.add("hidden");
     contactScreen.classList.add("hidden");
-    window.scrollTo({ top: 0 });
+    window.scrollTo(0, 0);
 }
 // Show only end screen
 function showEndScreen() {
@@ -105,7 +105,7 @@ function showEndScreen() {
     gameScreen.classList.add("hidden");
     endScreen.classList.remove("hidden");
     contactScreen.classList.add("hidden");
-    window.scrollTo({ top: 0 });
+    window.scrollTo(0, 0);
 }
 // Show only contact screen
 function showContactScreen() {
@@ -113,7 +113,7 @@ function showContactScreen() {
     gameScreen.classList.add("hidden");
     endScreen.classList.add("hidden");
     contactScreen.classList.remove("hidden");
-    window.scrollTo({ top: 0 });
+    window.scrollTo(0, 0);
 }
 // Clear game data 
 function clearGame() {

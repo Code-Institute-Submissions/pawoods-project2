@@ -283,6 +283,7 @@ Forking this repository will create a parallel version in your own GitHub accoun
 - [W3Schools](https://www.w3schools.com/js/js_array_sort.asp) - Article on Fisher Yates shefflu method for rnadomising cards once created.
 - [W3Schools](https://www.w3schools.com/js/js_timing.asp) - Article on adding timer function in JavaScript used to add time limit to game.
 - [W3Schools](https://www.w3schools.com/css/css3_variables.asp) - Adding root variables to CSS to allow easier changes within JavaScript when changing the dark/light theme.
+- [W3Schools](https://www.w3schools.com/jsref/met_win_scrollto.asp) - Adding scrollTo function to aid screen transition on smallest landscape devices.
 - [EmailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form/) - Tutorial on adding function to send automatic email on submission of contact form.
 - A big thank you to my Code Institute cohort who have been very encouraging throughout this project.
 - A special thank you to my Code Institute cohort facilitator [Iris Smok](https://github.com/Iris-Smok) and Mentor [Martina Terlevic](https://github.com/SephTheOverwitch) for their help with some difficulties surrounding this project and JavaScript in general.
