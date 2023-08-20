@@ -294,7 +294,7 @@ textarea {
     }
 }
 
-@media(max-height: 400px) {
+@media(max-height: 450px) {
 
     .header {
         position: fixed;
@@ -336,7 +336,7 @@ textarea {
     }
 
     h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     h2,
@@ -349,5 +349,9 @@ textarea {
     .main .screen {
         width: 70%;
         height: 70%;
+    }
+
+    h1 {
+        font-size: 50px;
     }
 }

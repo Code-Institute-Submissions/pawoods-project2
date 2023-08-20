@@ -229,6 +229,10 @@ During the coding process, I made sure to test each new addition to the function
 
    - Fixed by declaring the `timeInterval` variable globally and clearing the interval before setting it within the `startTimer` function.
 
+7. Bug found on smallest devices in landscape mode where the content overflowed the "screen" containers.
+
+   - Fixed by changing the appropriate screen container classes height to `fit-content` which allowed them to be scrolled. This is contained within a media query with `max-height: 450px` so as not to change mobile devices in potrait mode or landscape tablets/desktops.
+
 #### Unfixed Bugs
 
 There are no unfixed bugs that I am aware of.
