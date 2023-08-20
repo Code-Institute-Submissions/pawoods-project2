@@ -8,7 +8,7 @@ Incorporating multiple difficulties, SNAP! appeals to players of all ages and sk
 
 As well as being a fun and challenging player experience, SNAP! also tests mental agility, requiring quick reactions and accurate memory whilst playing against the clock.
 
-<!-- INSERT AM I RESPONSIVE IMAGE -->
+![Multi Device View](/assets/images/readmeImages/multi-device-image.png)
 
 [Click to view live site.](https://pawoods.github.io/project2/)
 
@@ -30,9 +30,6 @@ As well as being a fun and challenging player experience, SNAP! also tests menta
   - [Future Features](#future-features)
 - [Languages and Technologies](#languages-and-technologies)
 - [Testing](#testing)
-  - [Manual Testing](#manual-testing)
-  - [User Stories Testing](#user-stories-testing)
-  - [Code Testing](#code-testing)
   - [Bugs](#bugs)
     - [Fixed Bugs](#fixed-bugs)
     - [Unfixed Bugs](#unfixed-bugs)
@@ -79,7 +76,7 @@ For visual design wireframes on all device sizes, please see [WIREFRAMES.md](WIR
 
 Alongside the wireframes for the visual design, I decided to create a wireframe mockup of how each screen within the site would link with eachother, including the planned end of game scenarios that could result from playing the game through to completion. This served as an initial guide on setting up the basic HTML, CSS, and JS structure of the project.
 
-![Functionality flow](/assets/images/readmeImages/functionalityFlow.png)
+![Functionality flow](/assets/images/readmeImages/functionality-flow.png)
 
 ### Themes
 
@@ -99,7 +96,7 @@ With the title SNAP! in mind, this stylised title was input into [Google Fonts](
 
 For the remaining site text, I chose "Pathway Extreme" as it has a fairly spaced out, rounded style which nicely compliments the title font whilst also being easy to read in larger blocks of text.
 
-![Pathway Extreme Font](/assets/images/readmeImages/pathwayExtreme.png)
+![Pathway Extreme Font](/assets/images/readmeImages/pathway-extreme.png)
 
 #### Icons
 
@@ -119,16 +116,16 @@ On smaller devices, the main screen takes up a large majority on the screen real
 
 ### Current Features
 
-| Location          | Features                                                                                                                                                                                                                                                                                                                                                                                                                              | Screenshot                                                                                                              |
-| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------- |
-| Header            | 1. Stylised title logo that serves as a consistent home button across the site.<br>2. Light/dark theme toggle button.<br>3.Envelope logo which brings up the contact form page.<br>- This appears to the left side of the main game screen on any landscape orientation device/screen.<br>- Dark header showing dark icon moon logo.                                                                                                  | ![Header](/assets/images/readmeImages/headerFeatures.png)<br>![Dark Header](/assets/images/readmeImages/headerDark.png) |
-| Footer            | 1. Social media links which each open in a new tab.<br>- This appears to the right side of the main game screen on any landscape orientation device/screen.                                                                                                                                                                                                                                                                           | ![Footer](/assets/images/readmeImages/footerFeatures.png)                                                               |
-| Start Screen      | 1. Welcome title and brief description of the game.<br>2. "How to play" button which opens up a modal showing all game rules.<br>3. Difficulty selection section with distinct buttons for each of the regularly accessible difficulties.                                                                                                                                                                                             | ![Start Screen](/assets/images/readmeImages/startScreenFeatures.png)                                                    |
-| How To Play Modal | 1. Title matching the clicked button text and bullet point list of game rules.<br>2. "X" close button to remove modal and return to screen underneath.                                                                                                                                                                                                                                                                                | ![How To Play Modal](/assets/images/readmeImages/howToPlayFeatures.png)                                                 |
-| Game Screen       | 1. Timer with incrementing count in seconds counting towards the 30 seconds game time limit.<br>2. Score with incrementing count which adds 1 for each second and 1 for each attempt at making a pair.<br>3. Distinguishable game cards with the recognisable theme "?" and a box shadow present when hovered over.<br>- Card pairs amounts are set at; Easy - 8 pairs, Medium - 10 pairs, Hard - 12 pairs, Extreme/Bonus - 14 pairs. | ![Game Screen](/assets/images/readmeImages/gameScreenFeatures.png)                                                      |
-| End Screen        | 1. Win or lose message, depending on whether all pairs were found.<br>2. Personalised final score count.<br>3. Further encouragement/information message, depending on difficulty and win/lose/final score.<br>4. Extreme bonus round start button, only unlocked by completing hard mode with a score of 50 or less.<br>5. Home button to encourage continuation of the experience and be taken back to chosing a difficulty.        | ![End Screen](/assets/images/readmeImages/gameEndFeatures.png)                                                          |
-| Contact Screen    | 1. Message encouraging user interaction and simple, clear contact form requesting name, email, and feedback message.<br>2. Buttons to either submit or clear form. Submit button is differently coloured to further encourage user interaction. Automatic email is sent through EmailJS on submission.<br>3. Home button to once again, return the user to the start of the game once the form is submitted.                          | ![Contact Screen](/assets/images/readmeImages/contactScreenFeatures.png)                                                |
-| Submission Modal  | 1. Title matching the site theme text and message either confirming submission or letting user know of an error.<br>2. "X" close button to remove modal and return to screen underneath.                                                                                                                                                                                                                                              | ![Submission Modal](/assets/images/readmeImages/submissionFeatures.png)                                                 |
+| Location          | Features                                                                                                                                                                                                                                                                                                                                                                                                                              | Screenshot                                                                                                                |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------ |
+| Header            | 1. Stylised title logo that serves as a consistent home button across the site.<br>2. Light/dark theme toggle button.<br>3.Envelope logo which brings up the contact form page.<br>- This appears to the left side of the main game screen on any landscape orientation device/screen.<br>- Dark header showing dark icon moon logo.                                                                                                  | ![Header](/assets/images/readmeImages/header-features.png)<br>![Dark Header](/assets/images/readmeImages/header-dark.png) |
+| Footer            | 1. Social media links which each open in a new tab.<br>- This appears to the right side of the main game screen on any landscape orientation device/screen.                                                                                                                                                                                                                                                                           | ![Footer](/assets/images/readmeImages/footer-features.png)                                                                |
+| Start Screen      | 1. Welcome title and brief description of the game.<br>2. "How to play" button which opens up a modal showing all game rules.<br>3. Difficulty selection section with distinct buttons for each of the regularly accessible difficulties.                                                                                                                                                                                             | ![Start Screen](/assets/images/readmeImages/game-start-features.png)                                                      |
+| How To Play Modal | 1. Title matching the clicked button text and bullet point list of game rules.<br>2. "X" close button to remove modal and return to screen underneath.                                                                                                                                                                                                                                                                                | ![How To Play Modal](/assets/images/readmeImages/how-to-play-features.png)                                                |
+| Game Screen       | 1. Timer with incrementing count in seconds counting towards the 30 seconds game time limit.<br>2. Score with incrementing count which adds 1 for each second and 1 for each attempt at making a pair.<br>3. Distinguishable game cards with the recognisable theme "?" and a box shadow present when hovered over.<br>- Card pairs amounts are set at; Easy - 8 pairs, Medium - 10 pairs, Hard - 12 pairs, Extreme/Bonus - 14 pairs. | ![Game Screen](/assets/images/readmeImages/game-screen-features.png)                                                      |
+| End Screen        | 1. Win or lose message, depending on whether all pairs were found.<br>2. Personalised final score count.<br>3. Further encouragement/information message, depending on difficulty and win/lose/final score.<br>4. Extreme bonus round start button, only unlocked by completing hard mode with a score of 50 or less.<br>5. Home button to encourage continuation of the experience and be taken back to chosing a difficulty.        | ![End Screen](/assets/images/readmeImages/game-end-features.png)                                                          |
+| Contact Screen    | 1. Message encouraging user interaction and simple, clear contact form requesting name, email, and feedback message.<br>2. Buttons to either submit or clear form. Submit button is differently coloured to further encourage user interaction. Automatic email is sent through EmailJS on submission.<br>3. Home button to once again, return the user to the start of the game once the form is submitted.                          | ![Contact Screen](/assets/images/readmeImages/contact-screen-features.png)                                                |
+| Submission Modal  | 1. Title matching the site theme text and message either confirming submission or letting user know of an error.<br>2. "X" close button to remove modal and return to screen underneath.                                                                                                                                                                                                                                              | ![Submission Modal](/assets/images/readmeImages/submission-features.png)                                                  |
 
 ### Future Features
 
@@ -146,58 +143,29 @@ Below are the features that I would like to add to this project in the future:
 
 ## Languages and Technologies
 
-| Name                                                                  | Use                                                                               |
-| :-------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
-| [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)             | Structure of site content.                                                        |
-| [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)               | Layout and styling of site content.                                               |
-| [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | Used to make elements reactive to user interactions.                              |
-| [GitHub](https://github.com/)                                         | Houses project repository.                                                        |
-| [CodeAnywehere](https://dashboard.codeanywhere.com/)                  | IDE for development of project.                                                   |
-| [Balsamiq](https://balsamiq.com/)                                     | Visual design and funtional component flow wireframes.                            |
-| [Coolors](https://coolors.co/)                                        | Creation of colour palette.                                                       |
-| [Google Fonts](https://fonts.google.com/)                             | "Satisfy" and "Pathway Extreme" fonts across entire site.                         |
-| [Font Awesome](https://fontawesome.com/)                              | Icons across entire site. "sr-only" class for use of screen reader only elements. |
-| [Favicon](https://favicon.io/favicon-generator/)                      | Creation of stylised favicon.                                                     |
-| [EmailJS](https://www.emailjs.com/)                                   | Sends automatic email on submission of contact form.                              |
+| Name                                                                  | Use                                                                                |
+| :-------------------------------------------------------------------- | :--------------------------------------------------------------------------------- |
+| [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)             | Structure of site content.                                                         |
+| [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)               | Layout and styling of site content.                                                |
+| [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | Used to make elements reactive to user interactions.                               |
+| [GitHub](https://github.com/)                                         | Houses project repository.                                                         |
+| [CodeAnywehere](https://dashboard.codeanywhere.com/)                  | IDE for development of project.                                                    |
+| [Balsamiq](https://balsamiq.com/)                                     | Visual design and funtional component flow wireframes.                             |
+| [Coolors](https://coolors.co/)                                        | Creation of colour palette.                                                        |
+| [Google Fonts](https://fonts.google.com/)                             | "Satisfy" and "Pathway Extreme" fonts across entire site.                          |
+| [Font Awesome](https://fontawesome.com/)                              | Icons across entire site. "sr-only" class for use of screen reader only elements.  |
+| [Favicon](https://favicon.io/favicon-generator/)                      | Creation of stylised favicon.                                                      |
+| [EmailJS](https://www.emailjs.com/)                                   | Sends automatic email on submission of contact form.                               |
+| [Chrome DevTools](https://developer.chrome.com/docs/devtools/)        | For all testing during the development process and Lighthouse performance testing. |
+| [W3C](https://validator.w3.org/)                                      | HTML validation.                                                                   |
+| [W3C](https://jigsaw.w3.org/css-validator/)                           | CSS validation.                                                                    |
+| [JSHint](https://jshint.com/)                                         | JavaScript analysis                                                                |
 
 ---
 
 ## Testing
 
-### Manual Testing
-
-Once I had a fucntioning game from start to finish with basic styling and structure in place, I send it out to friends and family to gather feedback. All feedback was positive and the game worked as expected and presented a challenge that kept people interested in playing.
-
-### User Stories Testing
-
-1. First Time User
-
-| Test                                                                | Feature | Status |
-| :------------------------------------------------------------------ | :-----: | :----: |
-| To have a clear guide on how to play the game.                      |         |        |
-| To have consistent ability to easily navigate around the site.      |         |        |
-| To have feedback on how they are scoring during and after the game. |         |        |
-| To find a responsive game that is easily playable on all devices.   |         |        |
-
-2. Returning User
-
-| Test                                                              | Feature | Status |
-| :---------------------------------------------------------------- | :-----: | :----: |
-| To be able to face a more challenging gaming experience.          |         |        |
-| To be shown their score with the aim of improving.                |         |        |
-| To have a goal to aim towards to keep them returning to the game. |         |        |
-| To be able to provide feedback to the game creators.              |         |        |
-
-3. Site Admin
-
-| Test                                                                                            | Feature | Status |
-| :---------------------------------------------------------------------------------------------- | :-----: | :----: |
-| To be able to receive feedback from casual and regular players alike.                           |         |        |
-| To be able to easily update perameters; pairs of cards in each difficulty, game time limit etc. |         |        |
-
-### Code Testing
-
-For all code testing, please see [TESTING.md](TESTING.md).
+For all useer story testing and code testing, please see [TESTING.md](TESTING.md).
 
 ### Bugs
 
