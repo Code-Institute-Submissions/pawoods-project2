@@ -115,6 +115,8 @@ A favicon is also included which matches the question mark used on the unturned 
 
 The site is made up of just one page with a consistent header and footer visible throughout the various screens. Each screen is shown or hidden depending on user interactions with buttons, or game ending scenarios. I decided to complete the project in this way to challenge my ability to manipulate the DOM with JS but also to make the experience as reactive as possible for users as a SPA (Single Page Application) eliminates loading times between pages.
 
+On smaller devices, the main screen takes up a large majority on the screen real estate to maximise card space for play with thumbs and fingers. On larger devices, the main screen size is proportionally reduced to allow quicker mouse and touchpad movements over a smaller game area.
+
 ### Current Features
 
 | Location          | Features                                                                                                                                                                                                                                                                                                                                                                                                                              | Screenshot                                                                                                              |
@@ -283,4 +285,4 @@ Forking this repository will create a parallel version in your own GitHub accoun
 - [W3Schools](https://www.w3schools.com/css/css3_variables.asp) - Adding root variables to CSS to allow easier changes within JavaScript when changing the dark/light theme.
 - [EmailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form/) - Tutorial on adding function to send automatic email on submission of contact form.
 - A big thank you to my Code Institute cohort who have been very encouraging throughout this project.
-- A special thank you to my Code Institute cohort facilitator Iris Smok and Mentor Martina Tel for their help with some difficulties surrounding this project and JavaScript in general.
+- A special thank you to my Code Institute cohort facilitator [Iris Smok](https://github.com/Iris-Smok) and Mentor [Martina Terlevic](https://github.com/SephTheOverwitch) for their help with some difficulties surrounding this project and JavaScript in general.
