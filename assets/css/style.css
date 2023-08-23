@@ -140,6 +140,7 @@ body * {
 .social,
 .contact-button {
     font-size: 32px;
+    color: var(--text);
 }
 
 .title.home:hover,
