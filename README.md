@@ -205,6 +205,10 @@ During the coding process, I made sure to test each new addition to the function
 
   - Fixed by adding `/*jshint esversion: 6 */` to the top of the file as found in one solution by Josh Pittman on [Stack Overflow](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const).
 
+9. One user noted having different coloured social media icons when using the Firefox browser.
+
+  - Fixed by specifically setting the color on the social media links rather than relying on inheritance from the body.
+
 #### Unfixed Bugs
 
 There are no unfixed bugs that I am aware of.
