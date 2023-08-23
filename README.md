@@ -112,7 +112,7 @@ A favicon is also included which matches the question mark used on the unturned 
 
 The site is made up of just one page with a consistent header and footer visible throughout the various screens. Each screen is shown or hidden depending on user interactions with buttons, or game ending scenarios. I decided to complete the project in this way to challenge my ability to manipulate the DOM with JS but also to make the experience as reactive as possible for users as a SPA (Single Page Application) eliminates loading times between pages.
 
-On smaller devices, the main screen takes up a large majority on the screen real estate to maximise card space for play with thumbs and fingers. On larger devices, the main screen size is proportionally reduced to allow quicker mouse and touchpad movements over a smaller game area.
+On smaller devices, the main screen takes up a large majority on the screen real estate to maximise card space for play with thumbs and fingers. On larger devices, the main screen size is proportionally reduced to allow quicker mouse and touchpad movements over a smaller game area. Devices in portrait orientation will display the header and footer at the top and bottom of the screen respectively, while landscape devices will display the header to the left of the game screen and the footer to the right. Although it is noted that the conventional layout would see header and footer in the expected top and bottom location, this was a deliberate design choice made to enhance the playability of the game and the compact layout of the page structure in general. 
 
 ### Current Features
 
@@ -200,6 +200,10 @@ During the coding process, I made sure to test each new addition to the function
 7. Bug found on smallest devices in landscape mode where the content overflowed the "screen" containers.
 
    - Fixed by changing the appropriate screen container classes height to `fit-content` which allowed them to be scrolled. This is contained within a media query with `max-height: 450px` so as not to change mobile devices in potrait mode or landscape tablets/desktops.
+  
+8. Bug found when testing script.js file through JS Hint, many errors consisting of the message `use 'esversion: 6'`.
+
+  - Fixed by adding `/*jshint esversion: 6 */` to the top of the file as found in one solution by Josh Pittman on [Stack Overflow](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const).
 
 #### Unfixed Bugs
 
